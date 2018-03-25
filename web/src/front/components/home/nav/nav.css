@@ -1,0 +1,48 @@
+.nnav{
+    height:85px;
+    background:#ccc;
+}
+.nnav ul{
+    border-top:2px solid #999999;
+    padding-top: 3px;
+    display:flex;
+}
+.nnav ul li{
+    flex:1;
+    height:85px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+.nnav ul li a{
+    color:#333;
+    display:block;
+    font-size:20px;
+    height:100%;
+    width: 100%;
+    line-height:50px;
+}
+.nnav ul li a i{
+    display:block;
+    font-size:50px;
+    height:36px;
+    line-height:50px;
+}
+.nnav ul li a:hover{
+    color:red;
+}
+.nnav ul li a i:hover{
+    color:red;
+}
+/*.nnav ul li div{
+    color:#A3A3A3;
+    display:block;
+    font-size:20px;
+    height:36px;
+    line-height:36px;
+}*/
+.nnav>ul>li>.fa{
+    font-size:50px;
+    display:block;
+}
