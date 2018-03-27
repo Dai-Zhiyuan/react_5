@@ -1,10 +1,14 @@
 var express = require('express');
 var app = express();
+const http = require('http').Server(app);
 var bodyParser = require('body-parser');
-var db = require('../db/db');
-    db = db.mysql;
+// var db = require('../db/db');
+    // db = db.mysql;
 
 var path = require('path');
+
+var productsRouter = require('./products');
+var appUsersRouter = require('./appUsers')
 //可参考注释格式
 // var listpage = require('./listPage/listPage.js')
 // var loginPost = require('./login/login');
@@ -39,7 +43,9 @@ module.exports = {
         // shopPost.addQtyPost(app, db);
         // shopPost.subQtyPost(app, db);
         // shopPost.delShopsPost(app, db); 
-        app.listen(port,function(){
+        productsRouter.register(app);
+        appUsersRouter.register(app);
+        http.listen(port || 8181,function(){
             console.log('connect success')
         });
     }

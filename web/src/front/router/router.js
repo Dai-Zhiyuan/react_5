@@ -20,6 +20,13 @@ import goodlistComponent from '../components/goodlist/goodlistComponent.js'
 // 社区
 import CommunityComponent from '../components/community/CommunityComponent.js'
 
+//分类子文件
+import BaijiuComponent from '../components/goodlist/baijiu/baijiuConponent'
+import PutaojiuComponent from '../components/goodlist/putaojiu/putaojiuComponent'
+import YangjiuComponent from '../components/goodlist/yangjiu/yangjiuComponent'
+import HbpComponent from '../components/goodlist/hbp/hbpComponent'
+import JxssComponent from '../components/goodlist/jxss/jxssComponent'
+import JjzbComponent from '../components/goodlist/jjzb/jjzbComponent'
 
 
 export default (
@@ -28,10 +35,19 @@ export default (
         <Route path='/home' component={HomeComponent}>
             <IndexRedirect to="/index" />
             <Route path='/index' component={IndexComponent}/>
-            <Route path='/goodlist' component={goodlistComponent}/>
+            <Route path='/goodlist' component={goodlistComponent}>
+                <IndexRedirect to="/baijiu"/>
+                <Route path="/baijiu" component={BaijiuComponent} />
+                <Route path="/putaojiu" component={PutaojiuComponent} />
+                <Route path="/yangjiu" component={YangjiuComponent} />
+                <Route path="/hbp" component={HbpComponent} />
+                <Route path="/jxss" component={JxssComponent} />
+                <Route path="/jjzb" component={JjzbComponent} />
+            </Route>
             <Route path='/community' component={CommunityComponent}/>
             <Route path='/cart' component={CartComponent}/>
             <Route path='/mine' component={MineComponent}/>
+            <Route path='/list' component={ListComponent}/>            
         </Route>
     </Route>
 )

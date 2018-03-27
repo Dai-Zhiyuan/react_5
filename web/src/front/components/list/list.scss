@@ -1,0 +1,61 @@
+.hyz_list{
+    height: 100%;display:flex;flex-direction:column;
+    .listHeader{
+        height: 1.25rem;position: relative;
+        border-bottom: 1px solid #ccc;
+        line-height: 1.25rem;
+        i,h3,span{
+            height: 1.25rem;text-align: center;
+        }
+        i{
+            position: absolute;top:31px;left:20px;
+        }
+        span{
+            position: absolute;top:4px;right: 20px;
+        }
+    }
+    .listNav{
+        width: 100%;
+        height: 1.25rem;
+        line-height: 1.25rem;
+        border-bottom: 1px solid #ccc;
+        ul{
+            width: 100%;
+            li{
+                text-align: center;
+                float: left;
+                width: 25%;  
+                height: 1.25rem;
+                // justify-content: space-around; 
+            }
+        }     
+    }
+    .listGoods{
+        width: 100%;
+        ul{
+            width: 100%;
+            // display: flex;
+            // flex-direction: row;
+            li{
+                height: 4.375rem;
+                border-bottom: 1px solid #ccc;
+                padding: .3125rem;
+                img{
+                    width: 30%;
+                    margin-right:20px;
+                    float: left;
+                }
+                .goodsName{
+                    height:1.5625rem;
+                }
+                p{
+                    height: .625rem;
+                    span{
+                        padding:5px 60px 5px 0px;
+                    }
+                }
+            }
+        }
+    }
+
+}

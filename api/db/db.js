@@ -1,5 +1,5 @@
-var db = require('./DBHelper');
+var mysql = require('./DBHelper');
 
 module.exports = {
-   mysql:db
+   mysql
 }

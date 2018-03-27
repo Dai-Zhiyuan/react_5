@@ -1,0 +1,53 @@
+li{list-style: none;}
+.datagrid{
+    width: 100%;float: left;
+    .hostBrand{
+        width: 100%;
+        .brand{
+            height:0.5rem;
+        }
+        .allBrand{
+            flex-direction:row;
+            li{
+                text-align: center;
+                flex-direction: column;
+                display: flex;
+                width: 33%;
+                height: 1.7rem;
+                float: left;
+                // flex-wrap:wrap;
+                justify-content: space-around;
+                img{
+                    height: 1.2rem;
+                    width: 1.2rem;
+                    margin: 0 auto;
+                }
+             
+                
+                
+            }
+        }
+        
+    }
+    .address{
+        .addressSpan{
+            height: 0.5rem;
+        }
+        .allAddress{
+            flex-direction: row;
+            li{
+                text-align: center;
+                flex-direction: column;
+                display: flex;
+                height: 0.5rem;
+                justify-content: space-around;                
+                width: 33%;
+                float: left;
+            }
+        }
+
+    }
+    .price{
+        height: 10rem;
+    }
+}
