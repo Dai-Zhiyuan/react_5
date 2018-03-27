@@ -20,7 +20,7 @@ import goodlistComponent from '../components/goodlist/goodlistComponent.js'
 // 社区
 import CommunityComponent from '../components/community/CommunityComponent.js'
 
-
+import SignupComponent from '../components/login/signup/signupComponent.js'
 
 export default (
     <Route path='/' component={appComponent}> 
@@ -32,6 +32,8 @@ export default (
             <Route path='/community' component={CommunityComponent}/>
             <Route path='/cart' component={CartComponent}/>
             <Route path='/mine' component={MineComponent}/>
+            <Route path='/login' component = {LoginComponent} />
+            <Route path='/signup' component = {SignupComponent} />
         </Route>
     </Route>
 )
