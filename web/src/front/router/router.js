@@ -37,6 +37,9 @@ import JxssComponent from '../components/goodlist/jxss/jxssComponent'
 import JjzbComponent from '../components/goodlist/jjzb/jjzbComponent'
 
 
+// 登录子类
+import signupComponent from '../components/login/signup/signupComponent.js'
+
 export default (
     <Route path='/' component={appComponent}> 
         <IndexRedirect to="/home" />
@@ -53,12 +56,14 @@ export default (
                 <Route path="/jjzb" component={JjzbComponent} />
             </Route>
             <Route path='/community' component={CommunityComponent}/>
-            <Route path='/mine' component={MineComponent}/>
+            <Route path='/mine' component={MineComponent} />
+            <Route path='/login' component={LoginComponent} /> 
+            <Route path='/signup' component={signupComponent}/>
             <Route path='/list' component={ListComponent}/>            
         </Route>
         <Route path='/cart' component={CartComponent}/>
         <Route path='/jiesuan' component={jiesuanComponent}/>
-        <Route path='/zhifu' component={zhifuComponent}/>
+        <Route path='/zhifu' component={zhifuComponent}/>   
     </Route>
 )
 
