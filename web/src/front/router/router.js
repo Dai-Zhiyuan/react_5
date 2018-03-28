@@ -59,13 +59,6 @@ export default (
                 <Route path="/jjzb" component={JjzbComponent} />
             </Route>
             <Route path='/community' component={CommunityComponent}/>
-<<<<<<< HEAD
-            <Route path='/cart' component={CartComponent}/>
-            <Route path='/mine' component={MineComponent}/>
-            <Route path='/list' component={ListComponent}/>
-        </Route>
-        <Route path='/goodslistSearch' component={GoodslistSearchComponent}></Route>
-=======
             <Route path='/mine' component={MineComponent} />
             <Route path='/login' component={LoginComponent} /> 
             <Route path='/signup' component={signupComponent}/>
@@ -74,8 +67,8 @@ export default (
         <Route path='/details' component={DetailsComponent}></Route>
         <Route path='/cart' component={CartComponent}/>
         <Route path='/jiesuan' component={jiesuanComponent}/>
-        <Route path='/zhifu' component={zhifuComponent}/>   
->>>>>>> 986ced3ab8bd1877260f9670139dd8e9ca393818
+        <Route path='/zhifu' component={zhifuComponent}/> 
+        <Route path='/goodslistSearch' component={GoodslistSearchComponent}></Route>  
     </Route>
     
 )

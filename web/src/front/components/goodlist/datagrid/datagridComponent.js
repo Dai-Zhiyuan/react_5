@@ -130,13 +130,8 @@ export default class DataGridComponent extends React.Component{
                                     return (
                                         <li key={idx}>
                                             <Link to ={"/list?brand="+item}  activeClassName="active">
-<<<<<<< HEAD
                                                 <img ref={"img"+idx} src="" />
                                                 <span>{item}</span>
-=======
-                                                <img src="./src/front/img/bj-fj2.jpg" />
-                                                <span className="col">{item}</span>
->>>>>>> 986ced3ab8bd1877260f9670139dd8e9ca393818
                                             </Link>
                                         </li>
                                     )
