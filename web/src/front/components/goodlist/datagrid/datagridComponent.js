@@ -74,7 +74,7 @@ export default class DataGridComponent extends React.Component{
                                         <li key={idx}>
                                             <Link to ={"/list?brand="+item}  activeClassName="active">
                                                 <img src="./src/front/img/bj-fj2.jpg" />
-                                                <span>{item}</span>
+                                                <span className="col">{item}</span>
                                             </Link>
                                         </li>
                                     )
@@ -93,7 +93,7 @@ export default class DataGridComponent extends React.Component{
                             this.state.addressArray.map((item,idx) => {
                                 return (
                                     <li key={idx}>
-                                        <Link to={"/list?type1="+this.state.type+"&&address="+item} activeClassName="active">
+                                        <Link to={"/list?type1="+this.state.type+"&&address="+item} activeClassName="active" className="col">
                                             {item}
                                         </Link>
                                     </li>

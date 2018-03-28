@@ -19,6 +19,8 @@ import LoginComponent from '../components/login/LoginComponent.js'
 import goodlistComponent from '../components/goodlist/goodlistComponent.js'
 // 社区
 import CommunityComponent from '../components/community/CommunityComponent.js'
+// 详情页
+import DetailsComponent from '../components/details/detailsComponent.js'
 
 //分类子文件
 import BaijiuComponent from '../components/goodlist/baijiu/baijiuConponent'
@@ -49,6 +51,7 @@ export default (
             <Route path='/mine' component={MineComponent}/>
             <Route path='/list' component={ListComponent}/>            
         </Route>
+        <Route path='/details' component={DetailsComponent}></Route>
     </Route>
 )
 

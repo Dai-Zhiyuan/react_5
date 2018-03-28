@@ -21,17 +21,25 @@
         }
     }
     .goodslist{
-        flex:1;
+        flex:1;display:flex;
+        justify-content:space-between;
         .hyz_nav{
-            width: 20%;text-align: center;background: #eee;opacity: .5;font-weight:bold;float: left;
+            width:20%;text-align: center;background: #eee;opacity: .5;font-weight:bold;float: left;height:100%;
             ul{
                 li{
                     height:1rem;line-height: 1rem;
+                    a{
+                        color:#333;
+                    }
+                    .active{
+                        color:red;
+                        text-decoration:none;
+                    }
                 }
             }
         }
         .goodslist_cont{
-            width: 80%;float: left;
+            width: 75%;float: left;height:100%;
         }
         
     }
