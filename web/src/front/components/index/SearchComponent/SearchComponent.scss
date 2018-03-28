@@ -1,0 +1,14 @@
+#index_search{
+    height: 80px;display:flex;justify-content:space-around;align-items:center;width: 100%;background: -webkit-linear-gradient(top,rgba(0,0,0,0.7),rgba(0,0,0,0));
+    img{
+        border-radius:10px;height: 60px;width: 143px;
+    }
+    .fa{font-size:28px;position:absolute;left:182px;top:26px;color:#666;}
+    a{height: 60px;}
+    input{
+        height: 60px;width: 395px;padding-left:52px;font-size:26px;border: none;border-radius: 10px;color:#666;line-height: 60px;
+    }
+    button{
+        height: 60px;width: 62px;font-size:26px;background: none;color: white;border: none;
+    }
+}

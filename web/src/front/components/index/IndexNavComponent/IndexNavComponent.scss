@@ -1,0 +1,11 @@
+#indexnav{
+    ul{
+        display:flex;flex-wrap:wrap;
+        li{
+            width: 20%;height: 50%;
+            img{
+                width: 100%;
+            }
+        }
+    }
+}

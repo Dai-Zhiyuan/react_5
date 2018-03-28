@@ -1,0 +1,123 @@
+html,body{height: 100%;}
+#jiuxian{
+    height: 100%;display:flex;flex-direction:column;height: 1000px;
+    #j_search{
+        height: 80px;position:fixed;width:100%;z-index:100;
+    }
+    #j_carousel{
+        height:360px;
+    }
+    #j_nav{
+        height: 280px;
+    }
+    #j_main{
+        flex:1;
+        .picture_show{
+            height: 280px;display:flex;flex-wrap:wrap;
+            img{
+                height: 140px;width: 100%;
+            }
+            .picture1,.picture2{
+                width: 50%;
+            }
+        }
+        .headline{
+            height: 60px;padding-top:24px;display:flex;justify-content:space-around;
+            img{
+                width: 150px;height: 30px;
+            }
+            a{
+                display:inline-block;width: 363px;text-overflow:ellipsis;overflow:hidden;height: 30px;white-space:nowrap;border-left:1px solid #ccc;padding-left:30px;font-size:22px;color:#333;
+            }
+        }
+        .spike{
+            height: 60px;padding:0 20px;display:flex;justify-content:space-between;border-bottom:1px solid #ccc;font-size:24px;
+            h3{height: 60px;line-height: 60px;}
+            p{
+                width: 220px;line-height: 60px;height: 60px;padding:3px 0 0 8px;
+                span{width: 10px;height: 10px;background:#858585;border-radius:5px;color:white;}
+            }
+            a{
+                color:#858585;height: 60px;line-height: 60px;padding-top:4px;
+                i{margin-left:15px;}
+            }
+        }
+        .spike_list{
+            height: 300px;
+            ul{
+                display:flex;height:100%;padding:10px 0;overflow-x: auto;
+                li{
+                    width: 180px;flex:1;padding-left:20px;
+                    a{
+                        img{
+                            width: 160px;height: 160px;
+                        }
+                        span{display:block;font-size: 22px}
+                        .name{color: #252525;overflow: hidden;height: 60px;}
+                        .salesPrice{color:red;height: 20px;}
+                        .price{color:#ccc;height: 20px;margin-top:5px;}
+                    }
+                }
+            }
+        }
+        .pubBanner{
+            background:#F6F6F6;padding:10px;height: 600px;
+            ul{
+                li{
+                  height: 150px;
+                    img{
+                         height: 150px;width: 100%;
+                    }
+                }
+            }
+        }
+        .newProduct{
+            height: 260px;display:flex;flex-wrap:wrap;margin-top:20px;flex-direction:column;padding:0 20px;
+            .newProduct1{
+                width: 300px;height: 260px;
+            }
+            .newProduct2{
+                width: 300px;height: 130px;
+            }
+            .newProduct3{
+                width: 300px;height: 130px;
+            }
+        }
+        .indexClassify{
+            width: 100%;height: 2150px;
+            .indexTitle{height: 430px;}
+            .bigtitle{
+                width: 100%;height: 60px;border-bottom:1px solid #D0CFD0;
+                img{width: 100%;}
+            }
+            .smalltitle{
+                display:flex;flex-wrap:wrap;height: 360px;
+                img{height: 180px;width: 50%;border:1px solid #D0CFD0;}
+                img:nth-child(3){width: 33%;}
+                img:nth-child(4){width: 33%;}
+                img:nth-child(5){width: 33%;}
+                
+            }
+        }
+        .hotRecommend{
+            h5{color:#666;height: 60px;text-align:center;line-height: 60px;border-bottom:1px solid #ccc;font-size:25px;}
+            ul{
+                display:flex;flex-wrap:wrap;
+                li{
+                    width: 50%;border:4px solid #D0CFD0;height: 450px;padding: 0 15px;
+                    a{
+                        img{
+                           width: 100%;height: 300px;text-align:center;
+                        }
+                        span{display:block;font-size: 22px}
+                        .name{color: #252525;overflow: hidden;height: 60px;}
+                        .salesPrice{color:red;height: 20px;}
+                        .price{color:#ccc;height: 20px;margin-top:5px;}
+                    }
+                }
+            }
+        }
+
+    }
+      
+}
