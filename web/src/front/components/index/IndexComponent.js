@@ -1,5 +1,6 @@
 import React,{Component} from 'react'
 import ReactDOM from 'react-dom'
+
 // import LazyLoad from 'react-lazyload';
 import {Link} from 'react-router'
 
@@ -13,6 +14,9 @@ import IndexNavComponent from './IndexNavComponent/IndexNavComponent.js'
 import BackTopComponent from './backtop/backtop.js'
 
 import http from '../../utils/httpclient.js'
+
+
+import './index.css'
 
 
 export default class Indexcomponent extends Component{
@@ -39,6 +43,7 @@ export default class Indexcomponent extends Component{
     }
     render(){
         return(
+
             <div id='jiuxian'>
                 <header id='j_search'>
                     <SearchComponent/>
@@ -184,6 +189,10 @@ export default class Indexcomponent extends Component{
                         </div>
                     </div>
                 </main>   
+
+            <div className="indexbox">
+                index
+            </div>
             </div>
         )
     }

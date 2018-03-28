@@ -1,8 +1,10 @@
 import React,{Component} from 'react'
 import ReactDOM from 'react-dom'
 import {Link} from "react-router";
+import { BackTop } from 'antd';
 import http from '../../utils/httpclient'
 import './list.scss'
+
 
 export default class Indexcomponent extends Component{
     state = {
@@ -45,14 +47,22 @@ export default class Indexcomponent extends Component{
     }
     render(){
         // console.log(location.href)
-        console.log('111',(this.props.location.query))
-        
+        // console.log('111',(this.props.location.query))
+
+
         return(
             <div className="hyz_list">
+                
                 <div className="listHeader">
-                    <i className="fa fa-chevron-left"></i>
+                    <Link to="/goodlist" style={{width:"0.3rem",height:"0.3rem"}}>
+
+                    <i className="fa fa-chevron-left" style={{padding:"3px 5px"}}>
+                        
+                    </i>
+                    </Link>
                     <h3>商品列表</h3>
                     <span>筛选</span>
+                    
                 </div>
                 <div className="listNav">
                     <ul>
@@ -71,7 +81,7 @@ export default class Indexcomponent extends Component{
                                     <Link to={"/details?id="+item.id}>
                                         <img src={item.img} />
                                         <p className="goodsName">{item.name}</p>
-                                        <p>￥{item.price}</p>
+                                        <p className="price">￥{item.price}</p>
                                         <p>产地：{item.address}</p>
                                         <p >销量：{item.saleQty}</p>
                                         <p><span>99%好评</span><span>评论数：{item.reviewQty}</span></p>

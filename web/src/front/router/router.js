@@ -27,6 +27,8 @@ import LoginComponent from '../components/login/LoginComponent.js'
 import goodlistComponent from '../components/goodlist/goodlistComponent.js'
 // 社区
 import CommunityComponent from '../components/community/CommunityComponent.js'
+// 详情页
+import DetailsComponent from '../components/details/detailsComponent.js'
 
 //分类子文件
 import BaijiuComponent from '../components/goodlist/baijiu/baijiuConponent'
@@ -35,7 +37,11 @@ import YangjiuComponent from '../components/goodlist/yangjiu/yangjiuComponent'
 import HbpComponent from '../components/goodlist/hbp/hbpComponent'
 import JxssComponent from '../components/goodlist/jxss/jxssComponent'
 import JjzbComponent from '../components/goodlist/jjzb/jjzbComponent'
+
 import GotoSearchComponent from '../components/index/gotoSearch/gotoSearch'
+
+
+import GoodslistSearchComponent from '../components/goodlist/search/searchComponent'
 
 
 
@@ -67,10 +73,13 @@ export default (
             <Route path='/signup' component={signupComponent}/>
             <Route path='/list' component={ListComponent}/>            
         </Route>
+        <Route path='/details' component={DetailsComponent}></Route>
         <Route path='/cart' component={CartComponent}/>
         <Route path='/jiesuan' component={jiesuanComponent}/>
-        <Route path='/zhifu' component={zhifuComponent}/>   
+        <Route path='/zhifu' component={zhifuComponent}/> 
+        <Route path='/goodslistSearch' component={GoodslistSearchComponent}></Route>  
     </Route>
+    
 )
 
 

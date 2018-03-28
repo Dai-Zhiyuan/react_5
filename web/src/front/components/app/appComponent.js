@@ -2,7 +2,7 @@ import React,{Component} from 'react'
 import ReactDOM from 'react-dom'
 
 export default class Indexcomponent extends Component{
-    state={
+    state = {
         height:'100%'
     }
     render(){
