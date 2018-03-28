@@ -7,8 +7,16 @@ import appComponent from '../components/app/appComponent.js'
 import HomeComponent from '../components/home/HomeComponent.js'
 // 首页
 import IndexComponent from '../components/index/IndexComponent.js'
+
 // 购物车
 import CartComponent from '../components/cart/CartComponent.js'
+// 填写订单
+import jiesuanComponent from '../components/jiesuan/jiesuanComponent.js'
+// 支付
+import zhifuComponent from '../components/zhifu/zhifuComponent.js'
+
+
+
 // 列表
 import ListComponent from '../components/list/ListComponent.js'
 // 我的
@@ -31,6 +39,9 @@ import JxssComponent from '../components/goodlist/jxss/jxssComponent'
 import JjzbComponent from '../components/goodlist/jjzb/jjzbComponent'
 
 
+// 登录子类
+import signupComponent from '../components/login/signup/signupComponent.js'
+
 export default (
     <Route path='/' component={appComponent}> 
         <IndexRedirect to="/home" />
@@ -47,11 +58,15 @@ export default (
                 <Route path="/jjzb" component={JjzbComponent} />
             </Route>
             <Route path='/community' component={CommunityComponent}/>
-            <Route path='/cart' component={CartComponent}/>
-            <Route path='/mine' component={MineComponent}/>
+            <Route path='/mine' component={MineComponent} />
+            <Route path='/login' component={LoginComponent} /> 
+            <Route path='/signup' component={signupComponent}/>
             <Route path='/list' component={ListComponent}/>            
         </Route>
         <Route path='/details' component={DetailsComponent}></Route>
+        <Route path='/cart' component={CartComponent}/>
+        <Route path='/jiesuan' component={jiesuanComponent}/>
+        <Route path='/zhifu' component={zhifuComponent}/>   
     </Route>
 )
 

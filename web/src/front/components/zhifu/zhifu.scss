@@ -1,0 +1,120 @@
+#zhifu{
+    height: 100%;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-direction: column;
+}
+#z_header{
+    height: 1.5000rem;
+    width: 100%;
+    padding: 0.15625rem;
+    font-size: 0.53125rem;
+    line-height: 1.09375rem;
+    background-color: #FAFAFA;
+    border-bottom: 0.03125rem solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    .ico{
+        font-size:0.71875rem;
+        line-height: 0.9375rem;
+    }
+    a{
+        color:#252525;
+    }
+}
+#z_main{
+    height: 17.1875rem;
+    overflow-x: hidden;
+    background-color: #F3F5F6;
+    >p{
+        height: 0.9375rem;
+        line-height: 0.9375rem;
+        padding-left: 0.3125rem;
+        font-size: 0.375rem;
+    }
+    .zf_price{
+        height: 1.25rem;
+        background-color: #FFF;
+        padding: 0.3125rem;
+        line-height: 0.625rem;
+        font-size: 0.4375rem;
+        display: flex;
+        justify-content:space-between;
+        #zfp{
+            color:#FC4952;
+        }
+    }
+    .way{
+        height: 9.375rem;
+        margin: 0.3125rem 0;
+        padding: 0 0.3125rem;
+        background-color: #FFF;
+        p{
+            height: 1.5rem;
+            line-height: 1.5rem;
+            font-size: 0.40625rem;
+        }
+        ul{
+            li{
+                display: flex;
+                height: 1.5625rem;
+                border-top: 0.015625rem solid #ccc;
+                justify-content:space-between;
+                line-height: 1.5625rem;
+                .w_l{
+                    width: 4.6875rem;
+                    justify-content:flex-start;
+                    img{
+                        display: inline-block;
+                        vertical-align: center;
+                        width: 1.25rem;
+                        height: 1.25rem;
+                    }
+                    .zfw{
+                        display: inline-block;
+                        margin-left: 0.15625rem;
+                        width: 3.125rem;
+                        flex-direction:column;
+                        justify-content:flex-start;
+                        line-height: 0.65625rem;
+                        .z_t{
+                            font-size: 0.4375rem;
+                        }
+                        .z_b{
+                            font-size: 0.34375rem;
+                            color:#666;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .tishi{
+        margin: 10px 0;
+        height: 2.109375rem;
+        padding: 0.3125rem;
+        font-size: 0.375rem;
+        line-height: 0.4375rem;
+        span{
+            color:#FC4952;
+        }
+    }
+    .main_b{
+        height: 1.5625rem;
+        padding: 0 0.3125rem;
+        display: flex;
+        justify-content:center;
+        input{
+            width: 9.375rem;
+            height: 1.25rem;
+            display: inline-block;
+            color: #fff;
+            font-size: 0.5rem;
+            background-color: #FC4952;
+            border-radius: 0.3125rem;
+        }
+    }
+}
