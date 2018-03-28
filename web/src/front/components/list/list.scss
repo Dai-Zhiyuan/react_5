@@ -8,7 +8,10 @@
             height: 1.25rem;text-align: center;
         }
         i{
-            position: absolute;top:31px;left:20px;
+            position: absolute;top:.484375rem;left:.3125rem;
+            a{
+                width: .3125rem;height:.3125rem;
+            }
         }
         span{
             position: absolute;top:4px;right: 20px;
@@ -39,7 +42,7 @@
             li{
                 height: 4.375rem;
                 border-bottom: 1px solid #ccc;
-                padding: .3125rem;
+                padding: .2125rem;
                 img{
                     width: 30%;
                     margin-right:20px;
@@ -47,15 +50,33 @@
                 }
                 .goodsName{
                     height:1.5625rem;
+                    color:#000;
+                }
+                .price{
+                    color:red;
+                    font-size: .46875rem;
                 }
                 p{
+                    color:#333;
                     height: .625rem;
+                    padding:.08625rem 0rem;
                     span{
                         padding:5px 60px 5px 0px;
                     }
                 }
             }
         }
+    }
+    .toTop{
+        height: .9375rem;
+        width: 1.5625rem;
+        position: fixed;right:.625rem;
+        bottom: 2.34375rem;
+        background: red;
+        span{
+            line-height: .9375rem;
+        }
+    
     }
 
 }

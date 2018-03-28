@@ -9,6 +9,7 @@
     "start": "webpack-dev-server --devtool eval --progress --port 3002 --colors --content-base ./"
   },
   "devDependencies": {
+    "antd": "^3.3.3",
     "babel-core": "^6.0.0",
     "babel-loader": "^6.0.0",
     "babel-plugin-transform-decorators-legacy": "^1.3.4",

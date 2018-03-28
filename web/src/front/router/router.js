@@ -27,6 +27,7 @@ import YangjiuComponent from '../components/goodlist/yangjiu/yangjiuComponent'
 import HbpComponent from '../components/goodlist/hbp/hbpComponent'
 import JxssComponent from '../components/goodlist/jxss/jxssComponent'
 import JjzbComponent from '../components/goodlist/jjzb/jjzbComponent'
+import GoodslistSearchComponent from '../components/goodlist/search/searchComponent'
 
 
 export default (
@@ -47,9 +48,11 @@ export default (
             <Route path='/community' component={CommunityComponent}/>
             <Route path='/cart' component={CartComponent}/>
             <Route path='/mine' component={MineComponent}/>
-            <Route path='/list' component={ListComponent}/>            
+            <Route path='/list' component={ListComponent}/>
         </Route>
+        <Route path='/goodslistSearch' component={GoodslistSearchComponent}></Route>
     </Route>
+    
 )
 
 

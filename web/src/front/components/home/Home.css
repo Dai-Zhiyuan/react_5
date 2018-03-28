@@ -7,8 +7,8 @@
     flex:1;overflow-x: hidden;
 }
 .box>.home_nav{
-    height:85px;
-    line-height:85px;
+    height:1.328125rem;
+    line-height:1.328125rem;
     text-align:center;
     background:#ccc;
 }
