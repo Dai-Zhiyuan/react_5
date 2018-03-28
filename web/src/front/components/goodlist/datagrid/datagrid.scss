@@ -1,4 +1,10 @@
 li{list-style: none;}
+.col{
+    color:#333;
+}
+.active{
+    color:red;
+}
 .datagrid{
     width: 100%;float: left;
     padding: .15625rem;
@@ -13,15 +19,26 @@ li{list-style: none;}
         margin-top: .15625rem;
         width: 100%;
         .brand{
+<<<<<<< HEAD
             height:0.7rem;
             line-height: 0.7rem;
             background: #eee;
             border-left:.15625rem solid #f90;
             padding-left:.15625rem;
+=======
+            height:0.5rem;
+            background:#eee;
+            text-indent:28px;
+            border-left:10px solid orange;
+            span{
+
+            }
+>>>>>>> 986ced3ab8bd1877260f9670139dd8e9ca393818
         }
         .allBrand{
             flex-direction:row;
             li{
+
                 text-align: center;
                 flex-direction: column;
                 display: flex;
@@ -35,12 +52,15 @@ li{list-style: none;}
                     width: 1.2rem;
                     margin: 0 auto;
                 }
+<<<<<<< HEAD
                 a{
                     color:#000;
                 }
              
                 
                 
+=======
+>>>>>>> 986ced3ab8bd1877260f9670139dd8e9ca393818
             }
         }
         
@@ -48,11 +68,18 @@ li{list-style: none;}
     .address{
         height:2.5rem;
         .addressSpan{
+<<<<<<< HEAD
             height:0.7rem;
             line-height: 0.7rem;
             background: #eee;
             border-left:.15625rem solid #f90;
             padding-left:.15625rem;
+=======
+            height: 0.5rem;
+            background:#eee;
+            text-indent:28px;
+            border-left:10px solid #58bc58;
+>>>>>>> 986ced3ab8bd1877260f9670139dd8e9ca393818
         }
         .allAddress{
             padding:.15625rem 0;
@@ -65,14 +92,19 @@ li{list-style: none;}
                 justify-content: space-around;                
                 width: 33%;
                 float: left;
+<<<<<<< HEAD
                 a{
                     color:#000;
                 }
+=======
+                margin-top:10px;
+>>>>>>> 986ced3ab8bd1877260f9670139dd8e9ca393818
             }
         }
 
     }
     .price{
+<<<<<<< HEAD
         height: 2rem;
         .priceSpan{
             height:0.7rem;
@@ -81,5 +113,11 @@ li{list-style: none;}
             border-left:.15625rem solid #f90;
             padding-left:.15625rem;
         }
+=======
+        height: 0.5rem;
+        background:#eee;
+        text-indent:28px;
+        border-left:10px solid yellow;
+>>>>>>> 986ced3ab8bd1877260f9670139dd8e9ca393818
     }
 }

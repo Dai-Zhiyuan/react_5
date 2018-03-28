@@ -24,23 +24,38 @@
         }
     }
     .goodslist{
+<<<<<<< HEAD
         height:15.7875rem;
         .hyz_nav{
             width: 20%;text-align: center;background: #eee;float: left;
+=======
+        flex:1;display:flex;
+        justify-content:space-between;
+        .hyz_nav{
+            width:20%;text-align: center;background: #eee;opacity: .5;font-weight:bold;float: left;height:100%;
+>>>>>>> 986ced3ab8bd1877260f9670139dd8e9ca393818
             ul{
                 li{
                     height:1rem;line-height: 1rem;
                     a{
+<<<<<<< HEAD
                         width: 100%;
                         height:100%;
                         display: block;
                         color:#000;
+=======
+                        color:#333;
+                    }
+                    .active{
+                        color:red;
+                        text-decoration:none;
+>>>>>>> 986ced3ab8bd1877260f9670139dd8e9ca393818
                     }
                 }
             }
         }
         .goodslist_cont{
-            width: 80%;float: left;
+            width: 75%;float: left;height:100%;
         }
         
     }

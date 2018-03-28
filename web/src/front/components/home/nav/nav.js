@@ -9,7 +9,7 @@ export default class Indexcomponent extends Component{
                 <ul>
                     <li>
                         
-                        <IndexLink to="/home" activeClassName="active"><i className="fa fa-home"></i>
+                        <IndexLink to="/home" activeClassName="active" className="sy"><i className="fa fa-home"></i>
                             首页
                         </IndexLink>
                     </li>
