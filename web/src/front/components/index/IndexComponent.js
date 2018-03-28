@@ -1,7 +1,7 @@
 import React,{Component} from 'react'
 import ReactDOM from 'react-dom'
 // import LazyLoad from 'react-lazyload';
-// import {Link} from 'react-router'
+import {Link} from 'react-router'
 
 import './index.scss'
 
@@ -49,7 +49,7 @@ export default class Indexcomponent extends Component{
                 <nav id='j_nav'>
                     <IndexNavComponent/>
                 </nav>
-                <main id='j_main'>
+                <main id='j_index_main'>
                     <div className="picture_show">
                         <img src="./src/front/img/picture_show1.png" alt="" />
                         <img src="./src/front/img/picture_show2.png" alt="" className='picture1' />
@@ -69,14 +69,17 @@ export default class Indexcomponent extends Component{
                             {
                                 this.state.dataset1.map((item)=>{
                                     return(
+                                        <Link to ={"/details?id="+item.id} key={item.id}> 
+
                                             <li  key={item.id}>
-                                                <a href="#">
+                                                    
                                                     <img src={item.img} />
                                                     <span className='name'>{item.name}</span>
                                                     <span className='salesPrice'>￥{item.salePrice}</span>
-                                                    <span className='price'><del>￥{item.price}</del></span>
-                                                </a>
+                                                    <span className='index_price'><del>￥{item.price}</del></span>
+                                                   
                                             </li>
+                                        </Link>
                                     )
                                 })
                             } 
@@ -164,14 +167,16 @@ export default class Indexcomponent extends Component{
                                 {
                                     this.state.dataset2.map((item)=>{
                                         return(
-                                            <li  key={item.id}>
-                                                <a href="#">
-                                                    <img src={item.img} />
-                                                    <span className='name'>{item.name}</span>
-                                                    <span className='salesPrice'>￥{item.salePrice}</span>
-                                                    <span className='price'><del>￥{item.price}</del></span>
-                                                </a>
-                                            </li>
+                                           
+                                                <li  key={item.id}>
+                                                    <a href="#">
+                                                        <img src={item.img} />
+                                                        <span className='name'>{item.name}</span>
+                                                        <span className='salesPrice'>￥{item.salePrice}</span>
+                                                        <span className='index_price'><del>￥{item.price}</del></span>
+                                                    </a>
+                                                </li>
+                                            
                                         )
                                     })
                                 } 

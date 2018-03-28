@@ -32,8 +32,8 @@ export default class SearchComponent extends Component {
         return(
             <div className="swiper-container">
                 <div className="swiper-wrapper">
-                    <div className="swiper-slide"><img src="./src/front/img/slide1.jpg"/></div>
-                    <div className="swiper-slide"><img src="./src/front/img/slide2.jpg"/></div>
+                    <div className="swiper-slide"><img src="./src/front/img/slide1.jpg" /></div>
+                    <div className="swiper-slide"><img src="./src/front/img/slide2.jpg" /></div>
                     <div className="swiper-slide"><img src="./src/front/img/slide3.jpg"/></div>
                     <div className="swiper-slide"><img src="./src/front/img/slide4.jpg"/></div>
                     <div className="swiper-slide"><img src="./src/front/img/slide5.jpg"/></div>
