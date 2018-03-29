@@ -3,8 +3,8 @@
     background:#ccc;
 }
 .nnav ul{
-    border-top:0.03125rem solid #999999;
-    padding-top: 0.046875rem;
+    /*border-top:2px solid #999999;*/
+    /*padding-top: 0.046875rem;*/
     display:flex;
 }
 .nnav ul li{
@@ -21,7 +21,7 @@
     font-size:0.3125rem;
     height:100%;
     width: 100%;
-    line-height:0.78125rem;
+    line-height:0.765625rem;
 }
 .nnav ul li a i{
     display:block;
@@ -35,13 +35,6 @@
 .nnav ul li a i:hover{
     color:red;
 }
-/*.nnav ul li div{
-    color:#A3A3A3;
-    display:block;
-    font-size:20px;
-    height:36px;
-    line-height:36px;
-}*/
 .nnav>ul>li>.fa{
     font-size:0.78125rem;
     display:block;
