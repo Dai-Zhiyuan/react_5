@@ -312,5 +312,123 @@ module.exports = {
                 res.send(data);
             })
         })
+         //增加商品
+         app.get('/addCollect',(req,res) => {
+            let db1 = req.query.db;
+            // let obj = req.query;
+            // let keyArr = [];
+            // let valArr = [];
+            // for(var attr in obj){
+            //     console.log(attr);
+            //     console.log(obj[attr])
+            //     while(attr != 'db'){
+            //         console.log(111)
+            //         keyArr.push(attr)
+            //         valArr.push(obj[attr])
+            //         break;
+            //     }
+            // }
+            // console.log(keyArr)
+            // console.log(valArr)
+            // res.send('111')
+            
+            var promise = new Promise((resolve,reject) => {
+                //获取该表所有的数据
+                //修改id重复的bug
+                let allsql = "select * from " + db1;
+                
+                let allGoods;
+                db.mysql.select(allsql, function(data){
+                    // console.log('da',data)
+                    allGoods = data.data;
+                    resolve(allGoods)
+                })
+                // function cb(){
+                //     for(var i=0;i<allGoods.length;i++){
+                //         idArr.push(allGoods[i]['_id'])
+                //     }
+                //     console.log('_id',idArr)
+                // }
+            })
+            promise.then((allGoods) => {
+                // console.log(allGoods)
+                let promise1 = new Promise((resolve,reject) => {
+                    let idArr = [];
+                    for(var i=0;i<allGoods.length;i++){
+                        idArr.push({_id:allGoods[i]['_id'],id:allGoods[i].id,username:allGoods[i].username})
+                    }
+                    resolve(idArr)
+                })
+                return promise1
+            }).then((idArr) => {
+                console.log('idArr',idArr)
+                // let idValArr = [];
+                // let idQtyArr = [];
+                for(var i=0;i<idArr.length;i++){
+                    // idValArr.push(idArr[i]['_id'])
+                    // idQtyArr.push(idArr[i]['qty'])
+                    while(idArr[i]['_id'] == req.query['_id'] && idArr[i]['username'] == req.query['username']){
+                    
+                        //删除原来的数据
+                        console.log('delid',idArr[i]['id'])
+                        var delsql = "delete from " + db1 +" where id = '" + idArr[i]['id'] +"' && username='" +idArr[i]['username'] +"'"
+                        console.log(delsql)
+                        db.mysql.select(delsql, function(data){
+                            console.log('1111111',data)
+                        })
+                        break;
+                    }
+                }
+                let obj = req.query;
+                let keyArr = [];
+                let valArr = [];
+                for(var attr in obj){
+                    console.log(attr);
+                    console.log(obj[attr])
+                    while(attr != 'db'){
+                        console.log(111)
+                        keyArr.push(attr)
+                        valArr.push(obj[attr])
+                        break;
+                    }
+                }
+               
+                // console.log(idValArr)
+                // console.log(idQtyArr)
+                console.log(keyArr)
+                console.log(valArr)
+                let suijiId = Math.ceil(Math.random()*10000000);
+                console.log('suiji',suijiId)
+                var sql = 'insert into ' + db1 + " (id,";
+                for(var i=0;i<keyArr.length;i++){
+                    sql += keyArr[i] + ','
+                }
+                sql = sql.slice(0,-1);
+                sql += ") value ('" +suijiId + "',"
+                for(var i=0;i<valArr.length;i++){
+                    sql += "'"+valArr[i] + "',"
+                }
+                sql = sql.slice(0,-1);
+                sql += " )"            
+                console.log('add',sql)
+                db.mysql.select(sql, function(data){
+                    // console.log(data)
+                    res.send(data);
+                })
+                
+            })
+
+
+
+            
+        })
+        app.get('/getCollect',(req,res) => {
+            let username = req.query.username;
+            var sql = "select * from collect where username = '"+username+"' order by _id"
+            db.mysql.select(sql, function(data){
+                // console.log(data)
+                res.send(data);
+            })
+        })
     }
 }

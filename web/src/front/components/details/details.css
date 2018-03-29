@@ -271,7 +271,10 @@
     top:0;left:0;border-right:1px solid #E8E8E8;
 }
 .message>.message_top>div:nth-child(1) .add .right_a{
-    top:0;right:0;border-left:1px solid #E8E8E8;
+    top:0;left:1.5625rem;right:0;border-left:1px solid #E8E8E8;
+}
+.message>.message_top .spanAddCut{
+    position: absolute;top:0;left:.96125rem;line-height:0.78125rem ;
 }
 .message>.message_top>div:nth-child(2){
     height:1.5625rem;

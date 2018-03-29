@@ -38,14 +38,22 @@ export default class SignupComponent extends React.Component{
                 val.refs.jymBtn.style.background='#DF3832'
                 val.refs.jymBtn.value = '重新获取';
                 jymTime = 60;
+                if(val.refs.jymBtn){
+                    val.refs.jymBtn.removeAttribute("disabled");
+                    val.refs.jymBtn.style.background='#DF3832'
+                    val.refs.jymBtn.value = '重新获取';
+                }
+                jymTime = 10;
                 val.setState({
                     jym:null
                 })
                 return
             }else{
-                val.refs.jymBtn.value = "重新发送(" + jymTime + ")";
-                val.refs.jymBtn.setAttribute("disabled", true);
-                val.refs.jymBtn.style.background='#626365';
+                if(val.refs.jymBtn){
+                    val.refs.jymBtn.value = "重新发送(" + jymTime + ")";
+                    val.refs.jymBtn.setAttribute("disabled", true);
+                    val.refs.jymBtn.style.background='#626365';
+                }
                 jymTime--;
             }
             setTimeout(function(){
