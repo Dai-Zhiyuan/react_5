@@ -24,9 +24,12 @@ export default class Indexcomponent extends Component{
     // 校验码倒计时
     setTime(val,jymTime){
         if(jymTime==0){
-            val.refs.jymBtn.removeAttribute("disabled");
-            val.refs.jymBtn.style.background='#DF3832'
-            val.refs.jymBtn.value = '重新获取';
+            if(val.refs.jymBtn){
+                val.refs.jymBtn.removeAttribute("disabled");
+                val.refs.jymBtn.style.background='#DF3832'
+                val.refs.jymBtn.value = '重新获取';
+            }
+            
             jymTime = 10;
             val.setState({
                 jym:null
@@ -34,9 +37,12 @@ export default class Indexcomponent extends Component{
             console.log(val.state.jym);
             return
         }else{
-            val.refs.jymBtn.setAttribute("disabled", true);
-            val.refs.jymBtn.style.background='#626365';
-            val.refs.jymBtn.value = "重新发送(" + jymTime + ")";
+            if(val.refs.jymBtn){
+                val.refs.jymBtn.setAttribute("disabled", true);
+                val.refs.jymBtn.style.background='#626365';
+                val.refs.jymBtn.value = "重新发送(" + jymTime + ")";
+            }
+            
             jymTime--;
         }
         setTimeout(function(){
