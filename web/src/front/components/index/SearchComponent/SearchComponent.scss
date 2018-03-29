@@ -1,14 +1,14 @@
 #index_search{
-    height: 80px;display:flex;justify-content:space-around;align-items:center;width: 100%;background: -webkit-linear-gradient(top,rgba(0,0,0,0.7),rgba(0,0,0,0));
+    height: 1.25rem;display:flex;justify-content:space-around;align-items:center;width: 100%;background: -webkit-linear-gradient(top,rgba(0,0,0,0.7),rgba(0,0,0,0));
     img{
-        border-radius:10px;height: 60px;width: 143px;
+        border-radius:0.15625rem;height: 0.9375rem;width: 2.234375rem;
     }
-    .fa{font-size:28px;position:absolute;left:182px;top:26px;color:#666;}
-    a{height: 60px;}
+    .fa{font-size:0.4375rem;position:absolute;left:2.84375rem;top:0.40625rem;color:#666;}
+    a{height: 0.9375rem;}
     input{
-        height: 60px;width: 395px;padding-left:52px;font-size:26px;border: none;border-radius: 10px;color:#666;line-height: 60px;
+        height: 0.9375rem;width: 6.171875rem;padding-left:0.8125rem;font-size:0.40625rem;border: none;border-radius: 0.15625rem;color:#666;line-height: 0.9375rem;
     }
     button{
-        height: 60px;width: 62px;font-size:26px;background: none;color: white;border: none;
+        height: 0.9375rem;width: 0.96875rem;font-size:0.40625rem;background: none;color: white;border: none;
     }
 }

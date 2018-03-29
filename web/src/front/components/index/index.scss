@@ -5,7 +5,7 @@ html,body{height: 100%;}
         height: 80px;position:fixed;width:100%;z-index:100;
     }
     #j_carousel{
-        height:360px;
+        height:360px;width: 100%;
     }
     #j_nav{
         height: 270px;
@@ -72,27 +72,27 @@ html,body{height: 100%;}
             }
         }
         .newProduct{
-            height: 260px;display:flex;flex-wrap:wrap;margin-top:20px;flex-direction:column;padding:0 20px;
+            height: 4.0625rem;display:flex;flex-wrap:wrap;margin-top:0.3125rem;flex-direction:column;padding:0 20px;
             .newProduct1{
-                width: 300px;height: 260px;
+                width: 4.6875rem;height: 4.0625rem;
             }
             .newProduct2{
-                width: 300px;height: 130px;
+                width: 4.6875rem;height: 2.03125rem;
             }
             .newProduct3{
-                width: 300px;height: 130px;
+                width: 4.6875rem;height: 2.03125rem;
             }
         }
         .indexClassify{
-            width: 100%;height: 2150px;
-            .indexTitle{height: 430px;}
+            width: 100%;height: 33.59375rem;
+            .indexTitle{height: 6.71875rem;}
             .bigtitle{
-                width: 100%;height: 60px;border-bottom:1px solid #D0CFD0;
+                width: 100%;height: 0.9375rem;border-bottom:0.015625rem solid #D0CFD0;
                 img{width: 100%;}
             }
             .smalltitle{
-                display:flex;flex-wrap:wrap;height: 360px;
-                img{height: 180px;width: 50%;border:1px solid #D0CFD0;}
+                display:flex;flex-wrap:wrap;height: 5.625rem;
+                img{height: 2.8125rem;width: 50%;border:0.015625rem solid #D0CFD0;}
                 img:nth-child(3){width: 33%;}
                 img:nth-child(4){width: 33%;}
                 img:nth-child(5){width: 33%;}
@@ -102,17 +102,19 @@ html,body{height: 100%;}
         .hotRecommend{
             h5{color:#666;height: 60px;text-align:center;line-height: 60px;border-bottom:1px solid #ccc;font-size:25px;}
             ul{
-                display:flex;flex-wrap:wrap;
-                li{
-                    width: 50%;border:4px solid #D0CFD0;height: 450px;padding: 0 15px;
-                    a{
-                        img{
-                           width: 100%;height: 300px;text-align:center;
-                        }
-                        span{display:block;font-size: 22px}
-                        .name{color: #252525;overflow: hidden;height: 60px;}
-                        .salesPrice{color:red;height: 20px;}
-                        .index_price{color:#ccc;height: 20px;margin-top:5px;}
+                display:flex;flex-wrap:wrap;height: 430px;
+                a{
+                    width: 50%;
+                    li{
+                        width: 100%;border:4px solid #D0CFD0;height: 430px;padding: 0 15px;
+                        
+                            img{
+                               width: 100%;height: 300px;text-align:center;
+                            }
+                            span{display:block;font-size: 22px}
+                            .name{color: #252525;overflow: hidden;height: 60px;}
+                            .salesPrice{color:red;height: 20px;}
+                            .index_price{color:#ccc;height: 20px;margin-top:5px;}
                     }
                 }
             }

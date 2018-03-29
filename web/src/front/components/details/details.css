@@ -1,11 +1,11 @@
 
 /*轮播*/
 .swiper-container{
-    width: 630px;
+    width:9.84375rem;
     height: 630px;
 }
 .swiper-container img{
-    width:630px;
+    width:9.84375rem;
 }
 
 .detalBox{

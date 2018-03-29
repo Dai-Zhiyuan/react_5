@@ -75,7 +75,6 @@ export default class Indexcomponent extends Component{
                                 this.state.dataset1.map((item)=>{
                                     return(
                                         <Link to ={"/details?id="+item.id} key={item.id}> 
-
                                             <li  key={item.id}>
                                                     
                                                     <img src={item.img} />
@@ -172,16 +171,16 @@ export default class Indexcomponent extends Component{
                                 {
                                     this.state.dataset2.map((item)=>{
                                         return(
-                                           
+                                            <Link to ={"/details?id="+item.id} key={item.id}> 
                                                 <li  key={item.id}>
-                                                    <a href="#">
+                                                    
                                                         <img src={item.img} />
                                                         <span className='name'>{item.name}</span>
                                                         <span className='salesPrice'>￥{item.salePrice}</span>
                                                         <span className='index_price'><del>￥{item.price}</del></span>
-                                                    </a>
+                                                    
                                                 </li>
-                                            
+                                            </Link>
                                         )
                                     })
                                 } 
