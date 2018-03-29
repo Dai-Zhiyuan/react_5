@@ -1,0 +1,18 @@
+html,body{height:100%;width:100%;}
+.collect{
+	.collect_header{
+		height:1.68rem;display:flex;align-items:center;border:1px solid #ccc;background:#F3F5F6;
+		.back{font-size:50px;}
+		.headTitle{text-align:center;flex:1;font-size:34px;}
+		.compile{display:block;font-size:28px;width:1.333333rem;}
+	}
+	.collect_main{
+		flex:1;
+		.collect_list{
+			height:100%;display:flex;
+			.collect_product{
+				img{height:2.133333rem;width:2.133333rem;}
+			}
+		}
+	}
+}

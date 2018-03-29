@@ -27,14 +27,14 @@ export default class Indexcomponent extends Component{
     }
     componentWillMount(){
         http.get('products',{spike:1}).then((res)=>{
-            console.log(res)
+            // console.log(res)
             this.setState({   //在这里改变dataset的值
                 dataset1:res.data
             })
             // console.log(this.state.dataset);
         }),
         http.get('products',{recommend:true}).then((res)=>{
-            console.log('hh',res)
+            // console.log('hh',res)
             this.setState({   //在这里改变dataset的值
                 dataset2:res.data
             })
@@ -189,9 +189,7 @@ export default class Indexcomponent extends Component{
                     </div>
                 </main>   
 
-            <div className="indexbox">
-                index
-            </div>
+            
             </div>
         )
     }

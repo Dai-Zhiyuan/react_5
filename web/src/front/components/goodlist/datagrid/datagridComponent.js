@@ -186,18 +186,7 @@ export default class DataGridComponent extends React.Component{
                         }
                     </div>
                 </div>
-                {/* <div className="price">
-                    <div className="priceSpan">
-                        <span>价位</span>
-                    </div>
-                    <div className="allPrice">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>                        
-                    </div>
-                </div> */}
+                
             </div>
         )
     }

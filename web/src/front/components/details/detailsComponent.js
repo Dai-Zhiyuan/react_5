@@ -12,7 +12,7 @@ export default class DetailsComponent extends Component{
     
     componentWillMount(){
         http.get('http://10.3.136.55:8181/suibianid',this.props.location.query).then((res)=>{
-            console.log(res.data)
+            // console.log(res.data)
             this.setState({
                 dataset: res.data
             })
@@ -36,7 +36,7 @@ export default class DetailsComponent extends Component{
         })
         
         if(this.refs.input){
-            console.log('1')
+            // console.log('1')
             http.get('http://10.3.136.55:8181/add',{db:"cart",username:'hyz',_id:data[0].id,name:data[0].name,price:data[0].price,qty:this.refs.input.value,img:data[0].img}).then((res)=>{
             })
         }
@@ -61,11 +61,11 @@ export default class DetailsComponent extends Component{
         })
     }
     render(){
-        console.log(this.state.dataset)
+        // console.log(this.state.dataset)
         return(
             <div className="detalBox">
                 <div className="header">
-                <Link to="/list"><span>&lt;</span></Link>
+                <Link to="/list?brand=茅台"><span>&lt;</span></Link>
                     
                     <span>商品详情</span>
                     <span className="fa fa-bars"></span>
@@ -274,12 +274,10 @@ export default class DetailsComponent extends Component{
                         <i></i>
                         根据新修订的《商标法》及国家工商总局最新文件要求，2014年5月1日之后不得将“驰名商标”字样用于商品宣传，酒仙网依法对商品图片中含“驰名商标”字样做马赛克处理；同时，涉及厂家正在按照新规定逐步更换包装，在此期间，我们将对新旧包装货品随机发货，请以实际收到的货物为准。给您带来的不便，敬请谅解。
                     </div>
-
                     <div className="trait container">
                         <p>商品特点</p>
                         <i></i>
                     </div>
-
                     <div className="longImg container">
                         <img src="./src/front/img/details1.jpg" className="img1"/>
                         <img src="./src/front/img/details2.jpg"/>
@@ -315,24 +313,8 @@ export default class DetailsComponent extends Component{
                         <img src="./src/front/img/details32.jpg"/>
                         <img src="./src/front/img/details33.jpg"/>
                         <img src="./src/front/img/details34.jpg"/>
-
                     </div>
-
                 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                 <div className="foot">
                     <ul>
                         <li className="option1">

@@ -62,7 +62,7 @@ export default class Cartcomponent extends Component{
             this.setState({
                 dataset: res.data
             })
-            // console.log(res.data)
+            
             res.data.forEach(function(item){
                 total+=item.price*item.qty
                 

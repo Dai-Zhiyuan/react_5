@@ -14,7 +14,7 @@ export default class SucceedComponent extends Component{
                 <div className="zhezhao">
                     <ul className="ModalList-box">
                         <div className="m-t">
-                            <Link to="/cart">
+                            <Link to="/jiesuan">
                             支付成功!</Link>
                         </div>
                         <div className="m-b">

@@ -46,7 +46,7 @@ import GoodslistSearchComponent from '../components/goodlist/search/searchCompon
 
 
 // 登录子类
-import signupComponent from '../components/login/signup/signupComponent.js'
+import regComponent from '../components/login/reg/regComponent.js'
 
 export default (
     <Route path='/' component={appComponent}> 
@@ -64,21 +64,18 @@ export default (
                 <Route path="/jjzb" component={JjzbComponent} />
             </Route>
             <Route path='/community' component={CommunityComponent}/>
-            <Route path='/mine' component={MineComponent}/>
             <Route path='/list' component={ListComponent}/>
             <Route path='/gotoSearch' component={GotoSearchComponent}/>              
             <Route path='/mine' component={MineComponent} />
             <Route path='/login' component={LoginComponent} /> 
-            <Route path='/signup' component={signupComponent}/>
+            <Route path='/reg' component={regComponent}/>
             <Route path='/list' component={ListComponent}/>            
         </Route>
         <Route path='/details' component={DetailsComponent}></Route>
         <Route path='/cart' component={CartComponent}/>
         <Route path='/jiesuan' component={jiesuanComponent}/>
         <Route path='/zhifu' component={zhifuComponent}/> 
-        <Route path='/goodslistSearch' component={GoodslistSearchComponent}></Route>
-            <Route path='/cart' component={CartComponent}/>
-          
+        <Route path='/goodslistSearch' component={GoodslistSearchComponent}/>
     </Route>
     
 )

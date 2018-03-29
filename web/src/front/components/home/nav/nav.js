@@ -9,25 +9,25 @@ export default class Indexcomponent extends Component{
                 <ul>
                     <li>
                         
-                        <IndexLink to="/home" activeClassName="active" className="sy"><i className="fa fa-home"></i>
+                        <IndexLink to="/home" activeClassName="active" className="sy"><i className="icon iconfont icon-shouye"></i>
                             首页
                         </IndexLink>
                     </li>
                     <li>
                         
-                        <Link to="/goodlist" activeClassName="active"><i className="fa fa-th-large"></i>分类</Link>
+                        <Link to="/goodlist" activeClassName="active"><i className="icon iconfont icon-fenlei"></i>分类</Link>
                     </li>
                     <li>
                         
-                        <Link to="/community" activeClassName="active"><i className="fa fa-th-large"></i>社区</Link>
+                        <Link to="/community" activeClassName="active"><i className="icon iconfont icon-taolun"></i>社区</Link>
                     </li>
                     <li>
                         
-                        <Link to="/cart" activeClassName="active"><i className="fa fa-shopping-cart"></i>购物车</Link>
+                        <Link to="/cart" activeClassName="active"><i className="icon iconfont icon-gouwuche1"></i>购物车</Link>
                     </li>
                     <li>
                         
-                        <Link to="/mine" activeClassName="active"><i className="fa fa-user-o"></i>我的</Link>
+                        <Link to="/mine" activeClassName="active"><i className="icon iconfont icon-wode"></i>我的</Link>
                     </li>
                 </ul>
             </div>

@@ -28,9 +28,7 @@
     flex:1;
     overflow-x: hidden;
     background-color: #eee;
-    background-image:url("http://localhost:3002/src/front/img/cart.png");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-color: #F3F5F6;
     ul{
         li{
             height: 3.125rem;
@@ -100,10 +98,9 @@
         width: 65%;
         display: flex;
         .all{
-            padding-top: 0.625rem;
+            padding-top: 0.525rem;
             display: inline-block;
             width: 30%;
-            height: 1.575rem;
             text-align: center;
             line-height: 100%;
             .ipt{

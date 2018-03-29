@@ -14,7 +14,7 @@ export default class Indexcomponent extends Component{
         
     }
     search(){
-        console.log(111)
+        // console.log(111)
         hashHistory.push('/goodslistSearch')
     }
     render(){
