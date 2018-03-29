@@ -1,21 +1,33 @@
 import React,{Component} from 'react'
 import ReactDOM from 'react-dom'
-import {Link,IndexLink} from "react-router";
+import {Link,IndexLink,hashHistory} from "react-router";
 import http from '../../utils/httpclient'
 import './goodslist.scss'
 
 export default class Indexcomponent extends Component{
+    componentDidMount(){
+        jQuery( $ => {
+            $('.hyz_nav').on('click','li',function(){
+                $('ul li').className = '';
+            })
+        })
+        
+    }
+    search(){
+        console.log(111)
+        hashHistory.push('/goodslistSearch')
+    }
     render(){
         return(
             <div className="hyz_goodslist">
                 <div className="search">
-                    <input type="text" placeholder="请输入搜索信息"/>
+                    <input type="text" placeholder="请输入搜索信息" onClick={this.search.bind(this)}/>
                     <i className="fa fa-search"></i>
                 </div>
                 <div className="goodslist clearfix">
                     <div className="hyz_nav">
                         <ul>
-                            <li>
+                            <li ref="baijiu">
                                 <IndexLink to="/baijiu" activeClassName="active">白酒</IndexLink>
                             </li>
                             <li>

@@ -5,14 +5,22 @@ const db = require('../db/db');
 
 module.exports = {
     register(app){
+        //获取数据库的数据
+        app.get('/appUsers',(req,res) => {
+            var sql = "select * from appUsers"
+            db.mysql.select(sql, function(data){
+                // console.log(data)
+                res.send(data);
+            })
+        })
         //查找数据库是否有这个数据
-        app.post('/selectAppUsers', function(req, res){
+        app.get('/selectAppUsers', function(req, res){
 
             // var sql = "select SQL_CALC_FOUND_ROWS * from products order by id limit 0,10; select FOUND_ROWS() as rowsCount;";
             // var sql = "select SQL_CALC_FOUND_ROWS * from products order by id; select FOUND_ROWS() as rowsCount;";
             console.log(req)
-            console.log(req.body);
-            let username = req.body.username;
+            // console.log(req.body);
+            let username = req.query.username;
             var sql = "select username,password from appUsers where username = '" + username+"'" ;
             console.log(sql)
 			db.mysql.appusersSelect(sql, function(data){
@@ -21,13 +29,13 @@ module.exports = {
 			})
         });
         //写入数据库
-        app.post('/insertAppUsers', function(req, res){
+        app.get('/insertAppUsers', function(req, res){
 
             // var sql = "select SQL_CALC_FOUND_ROWS * from products order by id limit 0,10; select FOUND_ROWS() as rowsCount;";
             // var sql = "select SQL_CALC_FOUND_ROWS * from products order by id; select FOUND_ROWS() as rowsCount;";
-            console.log(req.body);
-            let username = req.body.username;
-            let password = req.body.password;
+            console.log(req.query);
+            let username = req.query.username;
+            let password = req.query.password;
             var sql = "INSERT INTO appUsers (username,password) VALUES('"+username+"','"+password+"')" ;
             console.log(sql)
 			db.mysql.insert(sql, function(data){

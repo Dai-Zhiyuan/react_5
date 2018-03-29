@@ -7,16 +7,23 @@ li{list-style: none;}
 }
 .datagrid{
     width: 100%;float: left;
+    padding: .15625rem;
+    .benner{
+        height:3.75rem;
+        overflow: hidden;
+        img{
+            height:3.75rem;
+        }
+    }
     .hostBrand{
+        margin-top: .15625rem;
         width: 100%;
         .brand{
-            height:0.5rem;
-            background:#eee;
-            text-indent:28px;
-            border-left:10px solid orange;
-            span{
-
-            }
+            height:0.7rem;
+            line-height: 0.7rem;
+            background: #eee;
+            border-left:.15625rem solid #f90;
+            padding-left:.15625rem;
         }
         .allBrand{
             flex-direction:row;
@@ -35,18 +42,27 @@ li{list-style: none;}
                     width: 1.2rem;
                     margin: 0 auto;
                 }
+                a{
+                    color:#000;
+                }
+             
+                
+                
             }
         }
         
     }
     .address{
+        height:2.5rem;
         .addressSpan{
-            height: 0.5rem;
-            background:#eee;
-            text-indent:28px;
-            border-left:10px solid #58bc58;
+            height:0.7rem;
+            line-height: 0.7rem;
+            background: #eee;
+            border-left:.15625rem solid #f90;
+            padding-left:.15625rem;
         }
         .allAddress{
+            padding:.15625rem 0;
             flex-direction: row;
             li{
                 text-align: center;
@@ -56,15 +72,21 @@ li{list-style: none;}
                 justify-content: space-around;                
                 width: 33%;
                 float: left;
-                margin-top:10px;
+                a{
+                    color:#000;
+                }
             }
         }
 
     }
     .price{
-        height: 0.5rem;
-        background:#eee;
-        text-indent:28px;
-        border-left:10px solid yellow;
+        height: 2rem;
+        .priceSpan{
+            height:0.7rem;
+            line-height: 0.7rem;
+            background: #eee;
+            border-left:.15625rem solid #f90;
+            padding-left:.15625rem;
+        }
     }
 }

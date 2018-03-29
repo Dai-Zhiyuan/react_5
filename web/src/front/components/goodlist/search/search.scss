@@ -1,0 +1,25 @@
+.hyz_search{
+    height: 100%;display:flex;flex-direction:column;
+    .search{
+        height: 1rem;text-align: center;position: relative;padding: 0.1rem 0rem;border-bottom:1px solid #ccc;opacity: .4;
+        input{
+            width:75%;height: 0.8rem;font-size: 0.4rem;padding-left: 8%;background: #efefef;border: 0px;cursor: pointer;margin-right:0.3rem;
+        }
+        .fa-search{
+            position: absolute;left:9%;top:22%;bottom:0;font-size: 0.5rem;
+        }
+        .fa-chevron-left{
+            position: absolute;left:1%;top:22%;bottom:0;font-size: 0.5rem;
+        }
+        
+    }
+    h3{height:1.25rem;line-height: 1.25rem;padding-left:.15625rem;}
+    .hostSearch{
+        width:100%;
+        height:1.25rem;
+        padding:.15625rem;
+        span{
+            height: .3125rem;padding:.046875rem .15625rem;
+        }
+    }
+}

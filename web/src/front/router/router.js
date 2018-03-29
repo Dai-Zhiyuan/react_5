@@ -38,6 +38,12 @@ import HbpComponent from '../components/goodlist/hbp/hbpComponent'
 import JxssComponent from '../components/goodlist/jxss/jxssComponent'
 import JjzbComponent from '../components/goodlist/jjzb/jjzbComponent'
 
+import GotoSearchComponent from '../components/index/gotoSearch/gotoSearch'
+
+
+import GoodslistSearchComponent from '../components/goodlist/search/searchComponent'
+
+
 
 // 登录子类
 import signupComponent from '../components/login/signup/signupComponent.js'
@@ -58,6 +64,9 @@ export default (
                 <Route path="/jjzb" component={JjzbComponent} />
             </Route>
             <Route path='/community' component={CommunityComponent}/>
+            <Route path='/mine' component={MineComponent}/>
+            <Route path='/list' component={ListComponent}/>
+            <Route path='/gotoSearch' component={GotoSearchComponent}/>              
             <Route path='/mine' component={MineComponent} />
             <Route path='/login' component={LoginComponent} /> 
             <Route path='/signup' component={signupComponent}/>
@@ -66,8 +75,12 @@ export default (
         <Route path='/details' component={DetailsComponent}></Route>
         <Route path='/cart' component={CartComponent}/>
         <Route path='/jiesuan' component={jiesuanComponent}/>
-        <Route path='/zhifu' component={zhifuComponent}/>   
+        <Route path='/zhifu' component={zhifuComponent}/> 
+        <Route path='/goodslistSearch' component={GoodslistSearchComponent}></Route>
+            <Route path='/cart' component={CartComponent}/>
+          
     </Route>
+    
 )
 
 

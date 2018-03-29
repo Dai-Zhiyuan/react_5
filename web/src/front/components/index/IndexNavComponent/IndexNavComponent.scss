@@ -1,0 +1,12 @@
+#indexnav{
+    height: 270px;
+    ul{
+        display:flex;flex-wrap:wrap;height: 100%;
+        li{
+            width: 20%;height: 50%;
+            img{
+                width: 100%;height: 100%;
+            }
+        }
+    }
+}

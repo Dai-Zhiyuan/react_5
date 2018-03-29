@@ -1,0 +1,35 @@
+#gotoSearch{
+    .hotsearch-top{
+        height: 80px;border-bottom:1px solid #ccc;display:flex;justify-content:space-around;align-items:center;
+        i{position:absolute;width: 20px;height: 20px;left:27px;top:24px;font-size:30px;}
+        input{
+            width: 534px;height: 60px;border:none;background:#F4F5F7;padding-left:60px;font-size:24px;line-height: 60px;border-radius:10px;
+        }
+        a{
+            height: 60px;width: 70px;background:#F4F5F7;border-radius: 10px;color:black;font-size:24px;
+            span{
+                width: 100px;height: 60px;line-height: 60px;padding:0 10px;
+            }
+        }
+    }
+    .hotsearch{
+        padding:10px;height: 280px;
+        h5{height: 60px;line-height: 60px;font-size:28px;}
+        ul{
+            display:flex;flex-wrap:wrap;height: 200px;
+            li{
+                padding: 8px 15px;background: #F4F5F7;margin:10px 8px;height: 50px;border-radius:25px;font-size:24px
+            }
+        }
+    }
+    .historysearch{
+        padding:10px;
+         h5{height: 60px;line-height: 60px;font-size:28px;}
+         ul{
+            display:flex;flex-wrap:wrap;height: 200px;
+            li{
+                padding: 8px 15px;background: #F4F5F7;margin:10px 8px;height: 50px;border-radius:25px;font-size:24px
+            }
+        }
+    }
+}

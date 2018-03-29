@@ -1,11 +1,15 @@
-
-/*轮播*/
-.swiper-container{
-    width: 630px;
-    height: 630px;
+.c_show{
+    width:100%;
+    height:10.0rem;/*320*/
+    background:#000;
 }
-.swiper-container img{
-    width:630px;
+.c_show .swiper-container{
+    width:100%;
+    height:10.0rem;/*320*/
+}
+.c_show .swiper-container img{
+    width:100%;
+    height:100%;
 }
 
 .detalBox{
@@ -43,8 +47,8 @@
 }
 
 .pic{
-    width: 790px;
-    height: 630px;
+    width: 12.34375rem;
+    height: 9.84375rem;
     position: relative;
     overflow: hidden;
 }
@@ -301,13 +305,13 @@
 .evaluate{
     padding:0 0.3125rem;
     background:#fff;
-    height:100%;
+    height:14.40625rem;
 }
 .evaluate>.evaluate_title{
     height:1.375rem;
     display:flex;
     justify-content:space-between;
-    border-bottom:1px solid #F0F0F0;
+    border-bottom:0.015625rem solid #F0F0F0;
 }
 .evaluate>.evaluate_title span{
     line-height:1.375rem;
@@ -319,45 +323,45 @@
     color:#FC5A5A;
 }
 .evaluate>.evaluate_container{
-    height:858px;
+    height:13.40625rem;
 }
 .evaluate>.evaluate_container>div{
-    height:264px;
+    height:4.125rem;
     border-bottom:1px solid #F0F0F0;
 }
 .evaluate>.evaluate_container>div div{
-    height:80px;
+    height:1.25rem;
     display:flex;
-    padding-top:26px;
+    padding-top:0.40625rem;
 }
 .evaluate>.evaluate_container>div div>span{
-    margin-right:20px;
-    line-height:40px;
+    margin-right:0.3125rem;
+    line-height:0.625rem;
 }
 .evaluate>.evaluate_container>div div .sp_img{
     background:url(../../img/xx.png) no-repeat;
-    width:100px;height:29px;
+    width:1.5625rem;height:0.453125rem;
     background-size:cover;
 }
 .evaluate>.evaluate_container>div div .sp_bor{
-    border:1px solid #CCCCCC;
-    height:40px;padding:0 10px;
+    border:0.015625rem solid #CCCCCC;
+    height:0.625rem;padding:0 10px;
     text-align:center;
-    line-height:40px;
-    width:80px;
+    line-height:0.625rem;
+    width:1.25rem;
 }
 .evaluate>.evaluate_container>div div .time{
-    margin-left:24px;
+    margin-left:0.375rem;
 }
 .evaluate>.evaluate_container>div>p{
-    height:50px;
+    height:0.78125rem;
 }
 .evaluate>.evaluate_container>div>span img{
-    width:120px;height:120px;
+    width:1.875rem;height:1.875rem;
     display:inline-block;
 }
 .evaluate>.evaluate_container>div>.pic_r img{
-    margin-right:10px;
+    margin-right:0.15625rem;
 }
 
 
@@ -447,7 +451,7 @@
 .trait i{
     position:absolute;
     left:0.703125rem;top:0.25rem;
-    display:block;width:0.3125rem;height:20px;
+    display:block;width:0.3125rem;height:0.3125rem;
     background:#B00000;
 }
 /*longImg*/

@@ -1,0 +1,16 @@
+.swiper-container{
+    height:360px;
+    width: 100%;
+    img{
+        width: 100%;height: 360px;
+    }
+    .swiper-pagination-bullets{
+        top:318px;left:210px;
+    }
+    .swiper-pagination-bullet{
+        width:13px;height:13px;background:white;opacity:0.6;margin:0 10px!important;
+    }
+    .swiper-pagination-bullet-active{
+        background:white;opacity:1;
+    }
+}

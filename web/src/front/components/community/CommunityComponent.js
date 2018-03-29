@@ -58,18 +58,14 @@ export default class Indexcomponent extends Component{
                     <span className="ico iconfont icon-xinxi sp2"></span>
                 </div>
 
-                <div className="c_show">
-                    
-                    <div className="swiper-container">
-                        <div className="swiper-wrapper">
-                            <div className="swiper-slide"><img src="./src/front/img/shequ1.jpg"/></div>
-                            <div className="swiper-slide"><img src="./src/front/img/shequ2.jpg"/></div>
-                            <div className="swiper-slide"><img src="./src/front/img/sheque3.jpg"/></div>
-                        </div>
-                    </div>
-
+                <div className="swiper-container">
+                <div className="swiper-wrapper">
+                    <div className="swiper-slide"><img src="./src/front/img/shequ1.jpg" /></div>
+                    <div className="swiper-slide"><img src="./src/front/img/shequ2.jpg" /></div>
+                    <div className="swiper-slide"><img src="./src/front/img/sheque3.jpg"/></div>
                 </div>
-
+                <div className="swiper-pagination"></div>
+            </div>
 
                 
 
