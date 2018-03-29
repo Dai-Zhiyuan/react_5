@@ -18,7 +18,6 @@ export default class DetailsComponent extends Component{
             })
         })
     }
-
     state = {
         dataset:[],
         display :'flex',
@@ -30,14 +29,14 @@ export default class DetailsComponent extends Component{
     
     goCar(){
         var data = this.state.dataset;
-        this.state.qtynum += (this.refs.input.value)*1;
+        this.state.qtynum += (this.refs.input.innerText)*1;
         this.setState({
             qtyNum:this.state.qtynum
         })
         
         if(this.refs.input){
             console.log('1')
-            http.get('http://10.3.136.55:8181/add',{db:"cart",username:'hyz',_id:data[0].id,name:data[0].name,price:data[0].price,qty:this.refs.input.value,img:data[0].img}).then((res)=>{
+            http.get('http://10.3.136.55:8181/add',{db:"cart",username:'hyz',_id:data[0].id,name:data[0].name,price:data[0].price,qty:this.refs.input.innerText*1,img:data[0].img}).then((res)=>{
             })
         }
     }
@@ -48,24 +47,32 @@ export default class DetailsComponent extends Component{
         })
     }
     goAdd(){
-        this.setState({
-            shopCount: this.state.shopCount + 1
-        })
+        // this.setState({
+        //     shopCount: this.state.shopCount + 1
+        // })
+        console.log(this.refs.input.innerText)
+
+        this.refs.input.innerText = this.refs.input.innerText*1+1;
     }
     goCut(){
-        if(this.state.shopCount==1){
-            return false
+        // if(this.state.shopCount==1){
+        //     return false
+        // }
+        // this.setState({
+        //     shopCount: this.state.shopCount - 1
+        // })
+        console.log(this.refs.input.innerText*1)
+        if(this.refs.input.innerText*1 > 1){
+            this.refs.input.innerText = this.refs.input.innerText-1;
         }
-        this.setState({
-            shopCount: this.state.shopCount - 1
-        })
+        
     }
     render(){
         console.log(this.state.dataset)
         return(
             <div className="detalBox">
                 <div className="header">
-                <Link to="/list"><span>&lt;</span></Link>
+                <Link to="/list?brand=茅台"><span>&lt;</span></Link>
                     
                     <span>商品详情</span>
                     <span className="fa fa-bars"></span>
@@ -143,7 +150,7 @@ export default class DetailsComponent extends Component{
                                 <span>数量</span>
                                 <span className="add">
                                     <button onClick={this.goCut.bind(this)} className="left_a">-</button>
-                                    <input type="text" ref="input" value={this.state.shopCount}/>
+                                    <span ref="input" className="spanAddCut">1</span>
                                     <button onClick={this.goAdd.bind(this)} className="right_a">+</button>
                                 </span>
                             </div>
