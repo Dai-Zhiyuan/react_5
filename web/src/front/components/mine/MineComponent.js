@@ -1,8 +1,28 @@
 import React,{Component} from 'react'
 import ReactDOM from 'react-dom'
+import {IndexLink,Link,hashHistory} from 'react-router'
 
 import './MineComponent.scss'
 export default class Indexcomponent extends Component{
+    componentWillMount(){
+        var username1 = sessionStorage.getItem("username");
+        this.setState({
+            username:username1
+        })
+        if(!username1){
+            hashHistory.push({pathname:'login'});
+        }
+    }
+    logout(){
+        var con =confirm('确定要退出登录吗?');
+        if(con==true){
+           hashHistory.push({pathname:'index'}); 
+           sessionStorage.removeItem('username');
+        }
+    }
+    state = {
+        username:''
+    }
     render(){
         return(
             <div className="mine">
@@ -11,16 +31,19 @@ export default class Indexcomponent extends Component{
                 	<div className="user_infor">
                 		<div className="headimg"><img src="" alt=""/></div>
                 		<div className="username">
-                			<div className="nikename">用户昵称</div>
-                			<div className="user_level">用户等级</div>
+                			<div className="nikename">{this.state.username}</div>
+                			<div className="user_level">等级：大天尊</div>
                 		</div>
                 	</div>
-                	<div className="logout_btn">退出登录</div>
+                	<div className="logout_btn" onClick={this.logout.bind(this)}>退出登录</div>
                 </header>
                 <section className="mine_indent">
                 	<div className="indent_top">
                 		<h3>我的订单</h3>
-                		<a href="" className="indent_btn">查看全部订单<i className="fa fa-chevron-right"></i></a>
+                		<IndexLink to="/indent" className="indent_btn">
+                            查看全部订单
+                            <i className="fa fa-chevron-right"></i>
+                        </IndexLink>
                 	</div>
                 	<ul className="indent_bottom">
                 		<li>
