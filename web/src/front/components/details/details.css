@@ -29,6 +29,15 @@
     padding:0.3125rem;
     font-size:0.5rem;
 }
+.detalBox>.header>a{
+     display:block;
+    padding:0.3125rem;
+    text-decoration:none;
+}
+.detalBox>.header>a>span{
+    font-size:0.5rem;
+    color:#fff;
+}
 .container{
     width:100%;
     padding:0 0.3125rem;
@@ -48,7 +57,7 @@
 
 .pic{
     width: 12.34375rem;
-    height: 9.84375rem;
+    height: 630px;
     position: relative;
     overflow: hidden;
 }
@@ -305,7 +314,7 @@
 .evaluate{
     padding:0 0.3125rem;
     background:#fff;
-    height:14.40625rem;
+    height:100%;
 }
 .evaluate>.evaluate_title{
     height:1.375rem;

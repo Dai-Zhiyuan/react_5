@@ -21,10 +21,11 @@ module.exports = {
             console.log(req)
             // console.log(req.body);
             let username = req.query.username;
-            var sql = "select username,password from appUsers where username = '" + username+"'" ;
+            let password = req.query.password;
+            var sql = "select * from appusers where username = '" + username +"'"  ;
             console.log(sql)
-			db.mysql.appusersSelect(sql, function(data){
-                console.log(data)
+			db.mysql.select(sql, function(data){
+                // console.log(data)
 				res.send(data);
 			})
         });
@@ -40,6 +41,22 @@ module.exports = {
             console.log(sql)
 			db.mysql.insert(sql, function(data){
                 console.log(data)
+				res.send(data);
+			})
+        });
+          //查找数据库是否有这个数据
+          app.get('/selectusers', function(req, res){
+
+            // var sql = "select SQL_CALC_FOUND_ROWS * from products order by id limit 0,10; select FOUND_ROWS() as rowsCount;";
+            // var sql = "select SQL_CALC_FOUND_ROWS * from products order by id; select FOUND_ROWS() as rowsCount;";
+            console.log(req)
+            // console.log(req.body);
+            let username = req.query.username;
+            let password = req.query.password;
+            var sql = "select * from users where username = '" + username +"' and password = '"+password+"'"  ;
+            console.log(sql)
+			db.mysql.select(sql, function(data){
+                // console.log(data)
 				res.send(data);
 			})
         });

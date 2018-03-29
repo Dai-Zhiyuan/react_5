@@ -298,7 +298,8 @@ module.exports = {
 
         //获取购物车商品数据
         app.get('/getCart',(req,res) => {
-            var sql = "select * from cart order by _id"
+            let username = req.query.username;
+            var sql = "select * from cart where username = '"+username+"' order by _id"
             db.mysql.select(sql, function(data){
                 // console.log(data)
                 res.send(data);

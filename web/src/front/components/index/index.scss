@@ -2,77 +2,77 @@ html,body{height: 100%;}
 #jiuxian{
     display:flex;flex-direction:column;
     #j_search{
-        height: 80px;position:fixed;width:100%;z-index:100;
+        height: 1.25rem;position:fixed;width:100%;z-index:100;
     }
     #j_carousel{
-        height:360px;width: 100%;
+        height:5.625rem;width: 100%;
     }
     #j_nav{
-        height: 270px;
+        height: 4.21875rem;
     }
     #j_index_main{
         flex:1;height: 100%;
         .picture_show{
-            height: 280px;display:flex;flex-wrap:wrap;
+            height: 4.375rem;display:flex;flex-wrap:wrap;
             img{
-                height: 140px;width: 100%;
+                height: 2.1875rem;width: 100%;
             }
             .picture1,.picture2{
                 width: 50%;
             }
         }
         .headline{
-            height: 60px;padding-top:24px;display:flex;justify-content:space-around;
+            height: .9375rem;padding-top:.375rem;display:flex;justify-content:space-around;
             img{
-                width: 150px;height: 30px;
+                width: 2.34375rem;height: .46875rem;
             }
             a{
-                display:inline-block;width: 363px;text-overflow:ellipsis;overflow:hidden;height: 30px;white-space:nowrap;border-left:1px solid #ccc;padding-left:30px;font-size:22px;color:#333;
+                display:inline-block;width: 5.671875rem;text-overflow:ellipsis;overflow:hidden;height: .46875rem;white-space:nowrap;border-left:.015625rem solid #ccc;padding-left:.46875rem;font-size:.34375rem;color:#333;
             }
         }
         .spike{
-            height: 60px;padding:0 20px;display:flex;justify-content:space-between;border-bottom:1px solid #ccc;font-size:24px;
-            h3{height: 60px;line-height: 60px;}
+            height: .9375rem;padding:0 .3125rem;display:flex;justify-content:space-between;border-bottom:.015625rem solid #ccc;font-size:.375rem;
+            h3{height: .9375rem;line-height: .9375rem;}
             p{
-                width: 220px;line-height: 60px;height: 60px;padding:3px 0 0 8px;
-                span{width: 10px;height: 10px;background:#858585;border-radius:5px;color:white;}
+                width: 3.4375rem;line-height: .9375rem;height: .9375rem;padding:.046875rem 0 0 .125rem;
+                span{width: .15625rem;height: .15625rem;background:#858585;border-radius:.078125rem;color:white;}
             }
             a{
-                color:#858585;height: 60px;line-height: 60px;padding-top:4px;
-                i{margin-left:15px;}
+                color:#858585;height: .9375rem;line-height: .9375rem;padding-top:.0625rem;
+                i{margin-left:.234375rem;}
             }
         }
         .spike_list{
-            height: 300px;
+            height: 4.6875rem;
             ul{
-                display:flex;height:100%;padding:10px 0;overflow-x: auto;
+                display:flex;height:100%;padding:.15625rem 0;overflow-x: auto;
                 li{
-                    width: 180px;flex:1;padding-left:20px;
+                    width: 2.8125rem;flex:1;padding-left:.3125rem;
                     
                         img{
-                            width: 160px;height: 160px;
+                            width: 2.5rem;height: 2.5rem;
                         }
-                        span{display:block;font-size: 22px}
-                        .name{color: #252525;overflow: hidden;height: 60px;}
-                        .salesPrice{color:red;height: 20px;}
-                        .index_price{color:#ccc;height: 20px;margin-top:5px;}
+                        span{display:block;font-size: .34375rem}
+                        .name{color: #252525;overflow: hidden;height: .9375rem;}
+                        .salesPrice{color:red;height: .3125rem;}
+                        .index_price{color:#ccc;height: .3125rem;margin-top:.078125rem;}
                     
                 }
             }
         }
         .pubBanner{
-            background:#F6F6F6;padding:10px;height: 600px;
+            background:#F6F6F6;padding:.15625rem;height: 9.375rem;
             ul{
                 li{
-                  height: 150px;
+                  height: 2.34375rem;
                     img{
-                         height: 150px;width: 100%;
+                         height: 2.34375rem;width: 100%;
                     }
                 }
             }
         }
         .newProduct{
-            height: 4.0625rem;display:flex;flex-wrap:wrap;margin-top:0.3125rem;flex-direction:column;padding:0 20px;
+            height: 4.0625rem;display:flex;flex-wrap:wrap;margin-top:0.3125rem;flex-direction:column;padding:0 .3125rem;
             .newProduct1{
                 width: 4.6875rem;height: 4.0625rem;
             }
@@ -100,21 +100,21 @@ html,body{height: 100%;}
             }
         }
         .hotRecommend{
-            h5{color:#666;height: 60px;text-align:center;line-height: 60px;border-bottom:1px solid #ccc;font-size:25px;}
+            h5{color:#666;height: .9375rem;text-align:center;line-height: .9375rem;border-bottom:.015625rem solid #ccc;font-size:.390625rem;}
             ul{
-                display:flex;flex-wrap:wrap;height: 430px;
+                display:flex;flex-wrap:wrap;height: 6.71875rem;
                 a{
                     width: 50%;
                     li{
-                        width: 100%;border:4px solid #D0CFD0;height: 430px;padding: 0 15px;
+                        width: 100%;border:.0625rem solid #D0CFD0;height: 6.71875rem;padding: 0 .234375rem;
                         
                             img{
-                               width: 100%;height: 300px;text-align:center;
+                               width: 100%;height: 4.6875rem;text-align:center;
                             }
-                            span{display:block;font-size: 22px}
-                            .name{color: #252525;overflow: hidden;height: 60px;}
-                            .salesPrice{color:red;height: 20px;}
-                            .index_price{color:#ccc;height: 20px;margin-top:5px;}
+                            span{display:block;font-size: .34375rem}
+                            .name{color: #252525;overflow: hidden;height: .9375rem;}
+                            .salesPrice{color:red;height: .3125rem;}
+                            .index_price{color:#ccc;height: .3125rem;margin-top:.078125rem;}
                     }
                 }
             }

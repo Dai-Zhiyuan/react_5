@@ -1,34 +1,34 @@
 #gotoSearch{
     .hotsearch-top{
-        height: 80px;border-bottom:1px solid #ccc;display:flex;justify-content:space-around;align-items:center;
-        i{position:absolute;width: 20px;height: 20px;left:27px;top:24px;font-size:30px;}
+        height: 1.25rem;border-bottom:.015625rem solid #ccc;display:flex;justify-content:space-around;align-items:center;
+        i{position:absolute;width: .3125rem;height: .3125rem;left:.421875rem;top:.375rem;font-size:.46875rem;}
         input{
-            width: 534px;height: 60px;border:none;background:#F4F5F7;padding-left:60px;font-size:24px;line-height: 60px;border-radius:10px;
+            width: 8.34375rem;height: .9375rem;border:none;background:#F4F5F7;padding-left:.9375rem;font-size:.375rem;line-height: 60px;border-radius:.15625rem;
         }
         a{
-            height: 60px;width: 70px;background:#F4F5F7;border-radius: 10px;color:black;font-size:24px;
+            height: .9375rem;width: 1.09375rem;background:#F4F5F7;border-radius: .15625rem;color:black;font-size:24px;
             span{
-                width: 100px;height: 60px;line-height: 60px;padding:0 10px;
+                width: 1.5625rem;height: .9375rem;line-height: .9375rem;padding:0 .15625rem;font-size: .375rem;
             }
         }
     }
     .hotsearch{
-        padding:10px;height: 280px;
-        h5{height: 60px;line-height: 60px;font-size:28px;}
+        padding:.15625rem;height: 4.375rem;
+        h5{height: .9375rem;line-height: .9375rem;font-size:.4375rem;}
         ul{
-            display:flex;flex-wrap:wrap;height: 200px;
+            display:flex;flex-wrap:wrap;height: 3.125rem;
             li{
-                padding: 8px 15px;background: #F4F5F7;margin:10px 8px;height: 50px;border-radius:25px;font-size:24px
+                padding: .125rem .234375rem;background: #F4F5F7;margin:.15625rem .125rem;height: .78125rem;border-radius:.390625rem;font-size:.375rem;
             }
         }
     }
     .historysearch{
-        padding:10px;
-         h5{height: 60px;line-height: 60px;font-size:28px;}
+        padding:.15625rem;
+         h5{height: .9375rem;line-height: .9375rem;font-size:.4375rem;}
          ul{
-            display:flex;flex-wrap:wrap;height: 200px;
+            display:flex;flex-wrap:wrap;height: 3.125rem;
             li{
-                padding: 8px 15px;background: #F4F5F7;margin:10px 8px;height: 50px;border-radius:25px;font-size:24px
+                padding: .125rem .234375rem;background: #F4F5F7;margin:.15625rem .125rem;height: .78125rem;border-radius:.390625rem;font-size:.375rem;
             }
         }
     }

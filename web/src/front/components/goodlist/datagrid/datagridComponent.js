@@ -51,23 +51,47 @@ export default class DataGridComponent extends React.Component{
             this.setState({
                 mul: mul*1.7 + 1 + 'rem'
             })
-            jQuery($ => {
-                let $img=$('.bennerImg');
-                // console.log($img.length)
-                // $('img').slice(1).hide();
-                let i=0;
-                setInterval(function(){
-                    i++;
-                    if(i>2){
-                        i=0;
-                    }
-                    $img.hide();
-                    $img.eq(i).fadeIn();
+            // jQuery($ => {
+            //     let $img=$('.bennerImg');
+            //     // console.log($img.length)
+            //     // $('img').slice(1).hide();
+            //     let i=0;
+            //     setInterval(function(){
+            //         i++;
+            //         if(i>2){
+            //             i=0;
+            //         }
+            //         $img.hide();
+            //         $img.eq(i).fadeIn();
                     
-                }, 3000)
-            })
+            //     }, 3000)
+            // })
         })
         
+    }
+    componentDidMount(){
+        var mySwiper = new Swiper ('.swiper-container', {
+            // 滚动方向 horizontal/vertical
+            direction: 'horizontal',
+            // 自动播放
+            autoplay:3000,
+            // 是否循环播放
+            loop: true,
+            // 如果需要分页器（小圆点）
+            // 是否需要分页器
+            pagination: '.swiper-pagination',
+            // 点击分页器是否切换到对应的图片 是 true 否 false
+            paginationClickable:true,
+
+            // 如果需要前进后退按钮
+            nextButton: '.swiper-button-next',
+            prevButton: '.swiper-button-prev',
+
+            // 用户操作swiper之后，是否禁止autoplay。默认为true：停止。
+            // 如果设置为false，用户操作swiper之后自动切换不会停止，每次都会重新启动autoplay。
+            // 操作包括触碰，拖动，点击pagination等。
+            autoplayDisableOnInteraction:false,
+        }) 
     }
     render(){
         // console.log(this.state.type)
@@ -114,10 +138,13 @@ export default class DataGridComponent extends React.Component{
         }
         return (
             <div className="datagrid">
-                <div className="benner">
-                    <img src="./src/front/img/listBenner1.jpg" className="bennerImg"/>
-                    <img src="./src/front/img/listBenner2.jpg" className="bennerImg"/>
-                    <img src="./src/front/img/listBenner3.jpg" className="bennerImg"/>
+
+                <div className="swiper-container">
+                    <div className="swiper-wrapper">
+                        <div className="swiper-slide"><img src="./src/front/img/listBenner1.jpg" className="bennerImg"/></div>
+                        <div className="swiper-slide"><img src="./src/front/img/listBenner2.jpg" className="bennerImg"/></div>
+                        <div className="swiper-slide"><img src="./src/front/img/listBenner3.jpg" className="bennerImg"/></div>
+                    </div>
                 </div>
                 <div className="hostBrand" ref="hostBrand" style={{height: this.state.mul}} >
                     <div className="brand">

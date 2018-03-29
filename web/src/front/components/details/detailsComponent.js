@@ -60,12 +60,13 @@ export default class DetailsComponent extends Component{
             shopCount: this.state.shopCount - 1
         })
     }
-
     render(){
+        console.log(this.state.dataset)
         return(
             <div className="detalBox">
                 <div className="header">
-                    <span>&lt;</span>
+                <Link to="/list"><span>&lt;</span></Link>
+                    
                     <span>商品详情</span>
                     <span className="fa fa-bars"></span>
                 </div>
@@ -87,7 +88,6 @@ export default class DetailsComponent extends Component{
                 </div>
 
                 <div className="main">
-
                     {
                         this.state.dataset.map((item,idx)=>{
                             return(
