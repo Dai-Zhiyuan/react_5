@@ -4,7 +4,22 @@ import { BrowserRouter as Router, Link,IndexLink} from "react-router";
 
 import './zhifu.scss'
 
-export default class Indexcomponent extends Component{
+import SucceedComponent from './succeedComponent'
+
+export default class zhifucomponent extends Component{
+    state={
+        show:false
+    }
+    showup(){
+        this.setState({
+            show:true
+        })
+    }
+    filldata(obj){
+        this.setState({
+            show:false
+        }) 
+    }
     render(){
         return(
             <div id="zhifu">
@@ -17,7 +32,7 @@ export default class Indexcomponent extends Component{
                     <p>订单已生成，请您尽快付款</p>
                     <div className="zf_price">
                         <span>支付金额</span>
-                        <span id="zfp">￥0.00</span>
+                        <span id="zfp">￥{sessionStorage.getItem('total')*1+10}</span>
                     </div>
                     <div className="way">
                         <p>支付方式</p>
@@ -86,9 +101,10 @@ export default class Indexcomponent extends Component{
                     </div>
                     <p className="tishi">安全提醒：酒仙网不会以任何理由，要求您点击链接进行退款或重新付款，谨防诈骗。有关订单和售后问题，酒仙网客服仅会通过电话: <span>010-60157999</span>与您沟通</p>
                     <div className="main_b">
-                        <input type="button" value="支    付"/>
+                        <input type="button" value="支    付" onClick={this.showup.bind(this)}/>
                     </div>
                 </div>
+                <SucceedComponent show={this.state.show}/>
             </div>
         )
     }
