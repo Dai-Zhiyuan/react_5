@@ -10,7 +10,7 @@ import $ from './jquery-3.2.1.min.js'
 import SearchComponent from './SearchComponent/SearchComponent.js'
 import CarouselComponent from './CarouselComponent/CarouselComponent.js'
 import IndexNavComponent from './IndexNavComponent/IndexNavComponent.js'
-import BackTopComponent from './backtop/backtop.js'
+
 
 import http from '../../utils/httpclient.js'
 
