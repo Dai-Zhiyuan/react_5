@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom'
 
 // import LazyLoad from 'react-lazyload';
 import {Link} from 'react-router'
-
 import './index.scss'
 
 import $ from './jquery-3.2.1.min.js'
@@ -188,7 +187,6 @@ export default class Indexcomponent extends Component{
                         </div>
                     </div>
                 </main>   
-
             <div className="indexbox">
                 index
             </div>

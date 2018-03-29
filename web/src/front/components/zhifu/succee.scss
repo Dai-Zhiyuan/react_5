@@ -1,0 +1,47 @@
+#Modal{
+    display:flex;
+    flex-direction:column;
+    height: 0;
+    .zhezhao{
+        display:flex;
+        position:fixed;
+        background:rgba(0,0,0,.6);
+        justify-content:flex-end;
+        left:0;
+        top:0;
+        right:0;
+        bottom:0;
+        height:100%;
+        width:100%;
+        .ModalList-box{
+            position:fixed;
+            top:50%;
+            left:50%;
+            transform:translate(-50%,-50%);
+            height:3.125rem;
+            width:5.46875rem;
+            background:#fff;
+            border-radius:0.3125rem;
+            .m-t{
+                height: 1.5625rem;
+                border-bottom: 1px solid #ccc;
+                text-align: center;
+                line-height: 1.5625rem;
+                font-size: 0.5625rem;
+                a{
+                    color:#666;
+                }
+            }
+            .m-b a{
+                display: block;
+                font-size: 0.46875rem;
+                height: 1.5625rem;
+                background-color: #FC4952;
+                text-align: center;
+                line-height: 1.5625rem;
+                color:#fff;
+                border-radius: 0 0 0.3125rem 0.3125rem;
+            }
+        }
+    }
+}

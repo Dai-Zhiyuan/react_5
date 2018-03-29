@@ -3,8 +3,22 @@ import ReactDOM from 'react-dom'
 import { BrowserRouter as Router, Link,IndexLink} from "react-router";
 
 import './jiesuan.scss'
+import http from '../../utils/httpclient.js'
+
 
 export default class Indexcomponent extends Component{
+    state = {
+        dataset : []
+        
+    }
+    componentWillMount(){
+        http.get('http://10.3.136.55:8181/getCart?username=hyz').then((res)=>{
+            this.setState({
+                dataset: res.data
+            })
+        })
+    }
+
     render(){
         return(
             <div id="jiesuan">
@@ -25,19 +39,25 @@ export default class Indexcomponent extends Component{
                     </div>
                     <div className="goods">
                         <ul>
-                            <li>
-                                <img src="src/front/img/jiu.png" />
-                                <div className="xinxi">
-                                    <i>
-                                        <span>52度 酒鬼原浆酒</span>
-                                        <span>￥29.00</span>
-                                    </i>
-                                    <i>
-                                        <span>500ml+酒器</span>
-                                        <span>x1</span>
-                                    </i>
-                                </div>
-                            </li>
+                        {
+                            this.state.dataset.map((item,idx) => {
+                                return(
+                                    <li key={item.id} id={item._id}>
+                                        <img src={item.img} alt="" />
+                                        <div className="xinxi">
+                                            <i>
+                                                <span>{item.name}</span>
+                                                <span>￥{item.price}</span>
+                                            </i>
+                                            <i>
+                                                <span>500ml+酒器</span>
+                                                <span>x{item.qty}</span>
+                                            </i>
+                                        </div>
+                                    </li>
+                                )
+                            })
+                        }
                             
                         </ul>
                     </div>
@@ -73,7 +93,7 @@ export default class Indexcomponent extends Component{
                     <div className="price">
                         <div className="p_t">
                             <span>商品金额</span>
-                            <span className="p">￥29.00 </span>
+                            <span className="p">￥{sessionStorage.getItem('total')}</span>
                         </div>
                         <div className="p_b">
                             <span className="icon iconfont icon-27_zhuyi">运费 </span>
@@ -85,7 +105,7 @@ export default class Indexcomponent extends Component{
                     <div className="f_left">
                         <div className="price">
                             <p>
-                                实付金额：<span>￥0.00</span>
+                                实付金额：<span>￥{sessionStorage.getItem('total')*1+10}</span>
                             </p>
                         </div>
                     </div>

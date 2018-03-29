@@ -37,7 +37,7 @@ export default class DetailsComponent extends Component{
         
         if(this.refs.input){
             console.log('1')
-            http.get('http://10.3.136.55:8181/add',{db:"cart",_id:data[0].id,name:data[0].name,price:data[0].price,qty:this.refs.input.value,img:data[0].img}).then((res)=>{
+            http.get('http://10.3.136.55:8181/add',{db:"cart",username:'hyz',_id:data[0].id,name:data[0].name,price:data[0].price,qty:this.refs.input.value,img:data[0].img}).then((res)=>{
             })
         }
     }
