@@ -1,19 +1,6 @@
 $(function(){
-    //每个固定的时间移动图片
-    // var timer = setInterval(picLoop,5000);
-    // var index = 0;
-    let num = 0;
     
-    // function picLoop(){
-    //     index++;
-    //     if (index==3) {index=0;}
-    //     $(".content").animate({"left":-630*index},300);
-    //     $("#index li").eq(index).css("background-color","red").siblings().css("background-color","rgba(100,100,100,0.3)");
-    // }
-
-
-
-
+    var num = 1;
     // 收藏/不收藏
     $('#sc').on('click',()=>{
         num++

@@ -2,9 +2,23 @@ html,body{height:100%;width:100%;}
 .indent{
 	height:100%;display:flex;flex-direction: column;
 	.indent_header{
-		height:1.68rem;display:flex;align-items:center;border:1px solid #ccc;
+		height:1.68rem;display:flex;align-items:center;border:1px solid #ccc;background:#F3F5F6;
 		.back{font-size:50px;}
-		.headTitle{text-align:center;}
-
+		.headTitle{text-align:center;flex:1;font-size:34px;}
+	}
+	.indent_nav{
+		height:1.333333rem;
+		.nav_ul{
+			height:1.333333rem;display:flex;align-item:center;
+			li{flex:1;font-size:28px;text-align:center;line-height:1.333333rem;color:#000;font-weight:bolder;}
+		}
+	}
+	.indent_main{
+		flex:1;background:#F3F5F6;display:flex;flex-direction:column;align-items:center;padding-top:2.666667rem;
+		.icon_side{
+			height:1.946667rem;width:1.946667rem;background:#D7D8DA;display:flex;justify-content:center;align-items:center;border-radius:50%;
+			.icon{font-size:100px;color:#73B9FF;line-height:1.946667rem;}
+		}
+		p{color:#999999;font-size:26px;padding-top:0.533333rem;}
 	}
 }

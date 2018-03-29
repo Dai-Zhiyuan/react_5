@@ -20,6 +20,12 @@ export default class Indexcomponent extends Component{
            sessionStorage.removeItem('username');
         }
     }
+    goIndent(){
+        hashHistory.push({pathname:'indent'}); 
+    }
+    collect(){
+        
+    }
     state = {
         username:''
     }
@@ -46,19 +52,19 @@ export default class Indexcomponent extends Component{
                         </IndexLink>
                 	</div>
                 	<ul className="indent_bottom">
-                		<li>
+                		<li onClick={this.goIndent.bind(this)}>
                 			<i className="fa fa-credit-card"></i>
                 			待付款
                 		</li>
-                		<li>
+                		<li onClick={this.goIndent.bind(this)}>
                 			<i className="fa fa-cube"></i>
                 			待发货
                 		</li>
-                		<li>
+                		<li onClick={this.goIndent.bind(this)}>
                 			<i className="fa fa-truck"></i>
                 			待收货
                 		</li>
-                		<li>
+                		<li onClick={this.goIndent.bind(this)}>
                 			<i className="fa fa-clone"></i>
                 			待评价
                 		</li>
@@ -66,13 +72,13 @@ export default class Indexcomponent extends Component{
                 </section>
                 <main className="mine_main">
                 	<ul className="main_ul">
-                		<li>
+                		<IndexLink to="/collect">
                 			<i className="icon iconfont icon-shoucang"></i>
                 			商品收藏
-                		</li>
+                		</IndexLink>
                 		<li><i className="icon iconfont icon-zuji"></i>浏览足迹</li>
-                		<li><i className="icon iconfont icon-dizhi"></i>地址管理</li>
-                		<li><i className="icon iconfont icon-anquan"></i>账户安全</li>
+                		<li><i className="icon iconfont icon-dizhi1"></i>地址管理</li>
+                		<li><i className="icon iconfont icon-ai-safe"></i>账户安全</li>
                 		<li><i className="icon iconfont icon-drxx66"></i>意见反馈</li>
                 		<li><i className="icon iconfont icon-kefurexian"></i>客户热线</li>
                 	</ul>

@@ -37,6 +37,10 @@ html,body{height:100%;width:100%;}
 		height:4.266667rem;
 		.main_ul{
 			height:4.266667rem;display:flex;flex-wrap:wrap;justify-content:space-around;
+			a{
+				display:flex;flex-direction:column;height:2.666667rem;font-size:.40625rem;width:2.0rem;text-align:center;line-height:2.666667rem;margin:0.266667rem;color:#585B5F;
+				i{font-size:.9375rem;height:0.933333rem;}
+			}
 			li{
 				display:flex;flex-direction:column;height:2.666667rem;font-size:.40625rem;width:2.0rem;text-align:center;line-height:2.666667rem;margin:0.266667rem;
 				i{font-size:.9375rem;height:0.933333rem;}

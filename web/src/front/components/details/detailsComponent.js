@@ -10,14 +10,18 @@ import './details.js'
 
 export default class DetailsComponent extends Component{
     
-    componentWillMount(){
+    componentDidMount(){
         http.get('http://10.3.136.55:8181/suibianid',this.props.location.query).then((res)=>{
             console.log(res.data)
             this.setState({
                 dataset: res.data
             })
         })
+        
+
     }
+
+
 
     state = {
         dataset:[],
@@ -25,7 +29,9 @@ export default class DetailsComponent extends Component{
         count:0,
         shopCount:1,
         qtyNum:0,
-        qtynum:0
+        qtynum:0,
+        username:sessionStorage.getItem("username"),
+        scColor:''
     }
     
     goCar(){
@@ -37,7 +43,7 @@ export default class DetailsComponent extends Component{
         
         if(this.refs.input){
             console.log('1')
-            http.get('http://10.3.136.55:8181/add',{db:"cart",username:'hyz',_id:data[0].id,name:data[0].name,price:data[0].price,qty:this.refs.input.value,img:data[0].img}).then((res)=>{
+            http.get('http://10.3.136.55:8181/add',{db:"cart",username:this.state.username,_id:data[0].id,name:data[0].name,price:data[0].price,qty:this.refs.input.value,img:data[0].img}).then((res)=>{
             })
         }
     }
@@ -59,6 +65,21 @@ export default class DetailsComponent extends Component{
         this.setState({
             shopCount: this.state.shopCount - 1
         })
+    }
+    sc(){
+        if(this.state.scColor == 'red'){
+            this.setState({
+                scColor : ''
+            })
+        }else{
+            this.setState({
+                scColor : 'red'
+            })
+        }
+        var data = this.state.dataset;
+        http.get('http://10.3.136.55:8181/addCollect',{db:"collect",_id:data[0].id,name:data[0].name,username:this.state.username,price:data[0].price,img:data[0].img}).then((res)=>{
+
+            })
     }
     render(){
         console.log(this.state.dataset)
@@ -93,17 +114,16 @@ export default class DetailsComponent extends Component{
                             return(
 
                                 <div className="c_show" key={idx}>
-                                    
+                                                                    
                                     <div className="swiper-container">
-                                        <div className="swiper-wrapper">
-                                            <div className="swiper-slide"><img src={item.img} alt="" /></div>
-                                            <div className="swiper-slide"><img src={item.imgurl1} alt="" /></div>
-                                            <div className="swiper-slide"><img src={item.imgurl2} alt="" /></div>
+                                       <div className="swiper-wrapper">
+                                         <div className="swiper-slide"><img src={item.img} alt="" /></div>
+                                         <div className="swiper-slide"><img src={item.imgurl1} alt="" /></div>
+                                         <div className="swiper-slide"><img src={item.imgurl2} alt="" /></div>
                                         </div>
-                                    </div>
+                                     </div>
 
                                 </div>
-
 
 
                                 
@@ -339,13 +359,13 @@ export default class DetailsComponent extends Component{
                             <i className="fa fa-user-o"></i>
                             <span>侍酒师</span>
                         </li>
-                        <li className="option1" id="sc" >
+                        <li className="option1" id="sc" onClick={this.sc.bind(this)}>
                             <i className="fa fa-heart-o" id="scc"></i>
-                            <span>收藏</span>
+                            <span style={{color:this.state.scColor}}>收藏</span>
                         </li>
                         <li className="option1">
                             <i className="fa fa-shopping-cart"></i>
-                            <span>购物车</span>
+                            <Link to="/cart"><span>购物车</span></Link>
                             <div>{this.state.qtyNum}</div>
                         </li>
                         <li className="option2 col1">
@@ -356,7 +376,7 @@ export default class DetailsComponent extends Component{
                         </li>
                         <li className="option2 col2">
                             <i></i>
-                            <span>立即购买</span>
+                            <Link to="/cart"><span className="col3">立即购买</span></Link>
                         </li>
                     </ul>
                 </div>

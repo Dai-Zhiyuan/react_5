@@ -28,7 +28,7 @@ export default class SignupComponent extends React.Component{
             });
 
             setTimeout(this.callback.bind(this),100);
-            var jymTime = 10;
+            var jymTime = 60;
             this.setTime(this,jymTime);
         }
         // 校验码倒计时
@@ -37,7 +37,7 @@ export default class SignupComponent extends React.Component{
                 val.refs.jymBtn.removeAttribute("disabled");
                 val.refs.jymBtn.style.background='#DF3832'
                 val.refs.jymBtn.value = '重新获取';
-                jymTime = 10;
+                jymTime = 60;
                 val.setState({
                     jym:null
                 })
