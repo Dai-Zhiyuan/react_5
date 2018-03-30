@@ -69,6 +69,12 @@ export default class Indexcomponent extends Component{
                 </Link>
             )
         }
+        var toast = (
+            <div className="toast">
+                
+            </div>
+        )
+
         return(
             <div className="community">
                 

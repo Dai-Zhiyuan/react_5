@@ -61,7 +61,7 @@ export default class SignupComponent extends React.Component{
             },1000)
         }
         callback(){
-            console.log(this.state.jym)
+            console.log('校验码：'+ this.state.jym);
         }
         goBack(){
             window.history.back()

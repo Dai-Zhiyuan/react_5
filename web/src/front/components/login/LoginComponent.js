@@ -53,7 +53,7 @@ export default class Indexcomponent extends Component{
             ,1000)
     }
     callback(){
-        console.log(this.state.jym)
+        console.log('校验码：'+ this.state.jym);
     }
     yzm(){
         var res = '';
@@ -264,7 +264,7 @@ export default class Indexcomponent extends Component{
                     <span  className="login_btn1" onClick={this.loginAccount.bind(this)}>立即登录</span>
                     <div className="serve_account">
                         <IndexLink to="/reg" activeClassName="regist">免费注册</IndexLink>
-                        <a className="getpwd">找回密码</a>
+                        <Link to="/find" className="getpwd">找回密码</Link>
                     </div>
                 </div>
             )
