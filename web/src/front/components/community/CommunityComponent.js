@@ -1,5 +1,6 @@
 import React,{Component} from 'react'
 import ReactDOM from 'react-dom'
+import {IndexLink,Link,hashHistory} from 'react-router'
 import './community.css'
 import http from '../../utils/httpclient.js'
 
@@ -31,7 +32,13 @@ export default class Indexcomponent extends Component{
     }
 
     componentWillMount(){
-
+        var username1 = sessionStorage.getItem("username");
+        console.log(username1)
+        if(username1){
+            this.setState({
+                username:username1
+            })
+        }
         http.get('http://10.3.136.55:8181/community',{}).then((res)=>{
             this.setState({
                 dataset:res.data
@@ -41,21 +48,32 @@ export default class Indexcomponent extends Component{
     }
 
     state = {
-
-        dataset : []
-
+        dataset : [],
+        username: ''
     }
 
     render(){
+        var content;
+        if(this.state.username){
+            content = (
+                <Link to="/mine" className="goMine">
+                    <i className="fa fa-user-o"></i>
+                    <span>我的</span>
+                </Link>
+            )
+        }else{
+            content =(
+                <Link to="/login" className="goLogin">
+                    <i className="fa fa-user-o"></i>
+                    <span>登录</span>
+                </Link>
+            )
+        }
         return(
             <div className="community">
                 
                 <div className="c_header">
-                    <span>
-                        <i className="fa fa-user-o"></i>
-                        <span>登录</span>
-                    </span>
-                    <span className="ico iconfont icon-xinxi sp2"></span>
+                    {content}
                 </div>
 
                 <div className="swiper-container">
