@@ -18,7 +18,7 @@ export default class Indexcomponent extends Component{
 	}
 	changeCode(){
 	    this.setState({
-	            yzm:this.yzm()
+	        yzm:this.yzm()
 	    })
 	}
 	getJym(){
@@ -62,6 +62,11 @@ export default class Indexcomponent extends Component{
 	callback(){
 	    console.log('校验码：'+ this.state.jym);
 	}
+	closeTip(){
+	    this.setState({
+	        tip:false
+	    })
+	}
 	find(){
 		var tel_regExp = /^[1][3,4,5,7,8][\d]{9}$/;
 		if(tel_regExp.test(this.refs.tel.value)){
@@ -72,25 +77,48 @@ export default class Indexcomponent extends Component{
 						hashHistory.push({pathname:'login'})
 					})
 				}else{
-					alert('校验码错误');
+					this.setState({
+					    tip:true,
+					    tipTxt:'校验码错误！'
+					})
 					this.refs.jym.value = '';
 				}
 			}else{
-				alert('验证码错误');
+				this.setState({
+				    tip:true,
+				    tipTxt:'验证码错误！'
+				})
                 this.refs.yzm.value = '';
 			}
 		}else{
-			alert('请输入正确的手机号');
+			this.setState({
+			    tip:true,
+			    tipTxt:'请输入正确的手机号！'
+			})
             this.refs.tel.value = '';
 		}
 	}
 	state = {
 		yzm:this.yzm(),
-		jym:null
+		jym:null,
+		tip: false,
+        tipTxt: ''
 	}
 	render(){
+		if(this.state.tip){
+		    var tipContent;
+		    tipContent = (
+		       <div className="shade">
+		           <div className="warning">
+		               <p className="tip_text">{this.state.tipTxt}</p>
+		               <span className="tip_btn" onClick={this.closeTip.bind(this)}>确定</span>
+		           </div>
+		       </div> 
+		    )
+		}
 		return (
 			<div className="find">
+				{tipContent}
 				<header className="find_header">
 					<i className="icon iconfont icon-htmal5icon37 back" onClick={this.goBack}></i>
 					<h2 className="headTitle">找回密码</h2>

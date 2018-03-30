@@ -20,7 +20,9 @@ export default class SignupComponent extends React.Component{
             somePwd: true,
             hasReg:'',
             canReg:'',
-            jym:null
+            jym:null,
+            tip: false,
+            tipTxt: ''
         }
         getJym(){
             this.setState({
@@ -132,11 +134,16 @@ export default class SignupComponent extends React.Component{
                 })
             }
         }
+        closeTip(){
+            this.setState({
+                tip:false
+            })
+        }
         reg(){
             var pwd_regExp = /^[\w]{6,16}$/;
             var tel_regExp = /^[1][3,4,5,7,8][\d]{9}$/;
-            if(tel_regExp.test(this.refs.tel.value) && pwd_regExp.test(this.refs.pwd1.value)){
-                if(this.refs.yzm.value == this.state.yzm){
+            if(this.refs.yzm.value == this.state.yzm){
+                if(tel_regExp.test(this.refs.tel.value) && pwd_regExp.test(this.refs.pwd1.value)){
                     if(this.refs.jym.value == this.state.jym){
                         if(this.state.canReg){
                             if(this.refs.pwd1.value == this.refs.pwd2.value){
@@ -145,11 +152,17 @@ export default class SignupComponent extends React.Component{
                                     hashHistory.push({pathname:'login'});
                                 })
                             }else{
-                                alert('两次输入的密码不一致');
+                                this.setState({
+                                    tip:true,
+                                    tipTxt:'两次输入的密码不一致！'
+                                })
                             }
                         }else{
+                            this.setState({
+                                tip:true,
+                                tipTxt:'该手机号已被注册！'
+                            })
                             this.refs.tel.value = '';
-                            alert('该手机号已被注册');
                             this.setState({
                                 noPhoneNum:false,
                                 errorPhoneNum:false,
@@ -158,16 +171,27 @@ export default class SignupComponent extends React.Component{
                             })
                         }
                     }else{
-                        alert('校验码错误！');
+                        this.setState({
+                            tip:true,
+                            tipTxt:'校验码错误！'
+                        })
+                        this.refs.jym.value = ''
                     }
                 }else{
-                   alert('验证码错误！'); 
+                    this.setState({
+                        tip:true,
+                        tipTxt:'用户名或者密码格式错误！'
+                    })
+                    this.refs.tel.value='';
+                    this.refs.pwd1.value='';
+                    this.refs.pwd2.value='';
                 }
             }else{
-                alert('亲，用户名或者密码格式错误,请参照提示好嘛！');
-                this.refs.tel.value='';
-                this.refs.pwd1.value='';
-                this.refs.pwd2.value='';
+                this.setState({
+                    tip:true,
+                    tipTxt:'验证码错误错误！'
+                })
+                this.refs.yzm.value = ''
                 this.setState({
                     noPhoneNum:false,
                     errorPhoneNum:false,
@@ -175,9 +199,6 @@ export default class SignupComponent extends React.Component{
                     hasReg:false
                 }) 
             }
-        }
-        componentDidMount(){
-
         }
         render(){
             var content;
@@ -208,8 +229,20 @@ export default class SignupComponent extends React.Component{
                     <span>该手机号可以注册</span>
                 )
             }
+            if(this.state.tip){
+                var tipContent;
+                tipContent = (
+                   <div className="shade">
+                       <div className="warning">
+                           <p className="tip_text">{this.state.tipTxt}</p>
+                           <span className="tip_btn" onClick={this.closeTip.bind(this)}>确定</span>
+                       </div>
+                   </div> 
+                )
+            }
     		return(
     			<div className="reg">
+                    {tipContent}
     				<header className="reg_header">
     				    <span className="icon iconfont icon-htmal5icon37 back" onClick={this.goBack}></span>
     	               <h2 className="headTitle">用户注册</h2>
