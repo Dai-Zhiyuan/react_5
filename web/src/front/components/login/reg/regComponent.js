@@ -63,6 +63,9 @@ export default class SignupComponent extends React.Component{
         callback(){
             console.log(this.state.jym)
         }
+        goBack(){
+            window.history.back()
+        }
         changeCode(){
             this.setState({
                     yzm:this.yzm()
@@ -208,9 +211,9 @@ export default class SignupComponent extends React.Component{
     		return(
     			<div className="reg">
     				<header className="reg_header">
-    					<a className="back">&lt;</a>
-        	               <h2 className="headTitle">用户注册</h2>
-        	               <a className="navBar fa fa-bars" ></a>
+    				    <span className="icon iconfont icon-htmal5icon37 back" onClick={this.goBack}></span>
+    	               <h2 className="headTitle">用户注册</h2>
+        	           <a className="navBar fa fa-bars" ></a>
     				</header>
     				<main className="reg_main">
     					<div className="user">

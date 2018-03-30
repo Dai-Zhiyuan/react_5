@@ -71,6 +71,9 @@ export default class DetailsComponent extends Component{
         }
         
     }
+    goBack(){
+        window.history.back()
+    }
     sc(){
         if(this.state.scColor == 'red'){
             this.setState({
@@ -91,8 +94,7 @@ export default class DetailsComponent extends Component{
         return(
             <div className="detalBox">
                 <div className="header">
-                <Link to="/list?brand=茅台"><span>&lt;</span></Link>
-                    
+                    <i className="icon iconfont icon-htmal5icon37 back" onClick={this.goBack}></i>
                     <span>商品详情</span>
                     <span className="fa fa-bars"></span>
                 </div>

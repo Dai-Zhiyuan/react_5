@@ -29,15 +29,15 @@
     padding:0.3125rem;
     font-size:0.5rem;
 }
-.detalBox>.header>a{
-     display:block;
-    padding:0.3125rem;
-    text-decoration:none;
+.detalBox>.header>.back{
+    display:block;
+    height:1.25rem;
+    width:1.5rem;
+    font-size:50px;
+    line-height:1.25rem;
+    text-align:center;
 }
-.detalBox>.header>a>span{
-    font-size:0.5rem;
-    color:#fff;
-}
+
 .container{
     width:100%;
     padding:0 0.3125rem;

@@ -27,11 +27,14 @@ export default class Indexcomponent extends Component{
 	state = {
 		content:'暂时没有订单'
 	}
+	goBack(){
+        window.history.back()
+    }
 	render(){
 		return(
 			<div className="indent">
 				<header className="indent_header">
-					<IndexLink className="back icon iconfont icon-htmal5icon37" to="/mine"></IndexLink>
+					<i className="back icon iconfont icon-htmal5icon37" onClick={this.goBack}></i>
 					<h2 className="headTitle">商品订单</h2>
 				</header>
 				<nav className="indent_nav">

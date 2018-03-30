@@ -55,6 +55,9 @@ export default class Indexcomponent extends Component{
     callback(){
         console.log(this.state.jym)
     }
+    goBack(){
+        window.history.back()
+    }
     yzm(){
         var res = '';
         for(var i=0; i<4; i++){
@@ -229,7 +232,7 @@ export default class Indexcomponent extends Component{
                     <span className="login_btn2" onClick={this.loginPhone.bind(this)}>立即登录</span>
                     <div className="serve_phone">
                         <IndexLink to="/reg" activeClassName="regist">免费注册</IndexLink>
-                        <a href="" className="getpwd">找回密码</a>
+                        <span className="getpwd">找回密码</span>
                     </div>
                 </div>
             )
@@ -264,7 +267,7 @@ export default class Indexcomponent extends Component{
                     <span  className="login_btn1" onClick={this.loginAccount.bind(this)}>立即登录</span>
                     <div className="serve_account">
                         <IndexLink to="/reg" activeClassName="regist">免费注册</IndexLink>
-                        <a href="" className="getpwd">找回密码</a>
+                        <span className="getpwd">找回密码</span>
                     </div>
                 </div>
             )
@@ -272,7 +275,7 @@ export default class Indexcomponent extends Component{
         return(
             <div className="login">
                 <header className="login_header">
-                	<a className="back">&lt;</a>
+                	<span className="icon iconfont icon-htmal5icon37 back" onClick={this.goBack}></span>
                 	<h2 className="headTitle">用户登录</h2>
                 	<a className="navBar fa fa-bars" ></a>
                 </header>

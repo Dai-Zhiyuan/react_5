@@ -71,10 +71,10 @@ export default (
             <Route path='/list' component={ListComponent}/>
             <Route path='/gotoSearch' component={GotoSearchComponent}/>              
             <Route path='/mine' component={MineComponent} />
-            <Route path='/login' component={LoginComponent} /> 
-            <Route path='/reg' component={regComponent}/>
             <Route path='/list' component={ListComponent}/>            
         </Route>
+        <Route path='/login' component={LoginComponent} /> 
+        <Route path='/reg' component={regComponent}/>
         <Route path='/indent' component={indentComponent}></Route>
         <Route path='/collect' component={collectComponent}></Route>
         <Route path='/details' component={DetailsComponent}></Route>

@@ -15,13 +15,18 @@ export default class Indexcomponent extends Component{
 			})
 		})	
 	}
-	addCart(id,name,price,img){
+	addCart(id,name,price,img,event){
+		event.stopPropagation();
 		var username1 = sessionStorage.getItem("username");
 		http.get('add',{db:'cart',username:username1,_id:id,name:name,price:price,img:img,qty:1}).then((res) => {
+			if(res){
+				alert('成功加入购物车')
+			}
 			console.log(res);
 		})
 	}
-	delCollect(id){
+	delCollect(id,event){
+		event.stopPropagation();
 		http.get('delete',{db:'collect',_id:id}).then((res) => {
 			console.log(res)
 			var username1 = sessionStorage.getItem("username");
@@ -32,6 +37,14 @@ export default class Indexcomponent extends Component{
 			})
 		})
 	}
+	goDeails(id,event){
+		event.stopPropagation();
+		var path = 'details?id=' + id;
+		hashHistory.push({pathname:path}); 
+	}
+	goBack(){
+	    window.history.back()
+	}
 	state = {
 		data:[],
 	}
@@ -39,16 +52,16 @@ export default class Indexcomponent extends Component{
 		return(
 			<div className="collect">
 				<header className="collect_header" >
-					<IndexLink className="back icon iconfont icon-htmal5icon37" to="/mine"></IndexLink>
+					<i className="icon iconfont icon-htmal5icon37 back" onClick={this.goBack}></i>
 					<h2 className="headTitle">我的收藏</h2>
-					<span className="compile">编辑</span>
+					<span className="compile"></span>
 				</header>
 				<main className="collect_main">
 					<ul className="collect_list">
 						{
 							this.state.data.map((item,idx)=>{
 								return(
-									<li className="collect_product" key={idx} data-id={item._id}>
+									<li className="collect_product" key={idx} data-id={item._id} onClick={this.goDeails.bind(this,item._id)}>
 										<img src={item.img} alt=""/>
 										<div className="product_detail">
 											<p>{item.name}</p>

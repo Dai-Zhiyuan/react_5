@@ -38,7 +38,7 @@ export default class Indexcomponent extends Component{
                 		<div className="headimg"><img src="" alt=""/></div>
                 		<div className="username">
                 			<div className="nikename">{this.state.username}</div>
-                			<div className="user_level">等级：大天尊</div>
+                			<div className="user_level">会员等级LV1</div>
                 		</div>
                 	</div>
                 	<div className="logout_btn" onClick={this.logout.bind(this)}>退出登录</div>
