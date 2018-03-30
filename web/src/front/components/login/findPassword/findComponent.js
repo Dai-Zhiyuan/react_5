@@ -60,7 +60,7 @@ export default class Indexcomponent extends Component{
 	    },1000)
 	}
 	callback(){
-	    console.log('校验码：'+ this.state.jym)
+	    console.log('校验码：'+ this.state.jym);
 	}
 	find(){
 		var tel_regExp = /^[1][3,4,5,7,8][\d]{9}$/;
