@@ -223,7 +223,6 @@ export default class Indexcomponent extends Component{
                     </div>
                 </main>   
             <div className="indexbox">
-                index
             </div>
             </div>
         )
