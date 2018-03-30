@@ -2,9 +2,9 @@ html,body{height:100%;width:100%;}
 .collect{
 	.collect_header{
 		height:1.68rem;display:flex;align-items:center;border:1px solid #ccc;background:#F3F5F6;
-		.back{display:block;height:1.25rem;width:1.5rem;font-size:50px;line-height:1.25rem;text-align:center;}
-		.headTitle{text-align:center;flex:1;font-size:34px;}
-		.compile{display:block;font-size:28px;width:1.333333rem;}
+		.back{display:block;height:1.25rem;width:1.5rem;font-size:0.78125rem;line-height:1.25rem;text-align:center;}
+		.headTitle{text-align:center;flex:1;font-size:0.53125rem;}
+		.compile{display:block;font-size:0.4375rem;width:1.333333rem;}
 	}
 	.collect_main{
 		flex:1;padding:0.32rem;
@@ -15,14 +15,14 @@ html,body{height:100%;width:100%;}
 				img{height:2.133333rem;width:2.133333rem;background: #58bc58;border:1px solid #ccc;}
 				.product_detail{
 					flex:1;padding-left:0.266667rem;display:flex;flex-direction:column;justify-content:space-around;
-					p{font-size:26px;font-weight:bolder;color:#000;}
-					span{color:#C23042;font-weight:bolder;font-size:26px;}
+					p{font-size:0.40625rem;font-weight:bolder;color:#000;}
+					span{color:#C23042;font-weight:bolder;font-size:0.40625rem;}
 				}
 				.product_button{
 					display:flex;flex-direction:column;justify-content:center;
 					span{
-						height:0.8rem;width:60px;margin-bottom:0.266667rem;text-align:center;
-						i{font-size:40px;}
+						height:0.8rem;width:0.9375rem;margin-bottom:0.266667rem;text-align:center;
+						i{font-size:0.625rem;}
 					}
 					.icon-gouwuche-01{color:#C23042;font-weight:bolder;}
 				}

@@ -55,9 +55,6 @@ export default class Indexcomponent extends Component{
     callback(){
         console.log(this.state.jym)
     }
-    goBack(){
-        window.history.back()
-    }
     yzm(){
         var res = '';
         for(var i=0; i<4; i++){
@@ -275,7 +272,7 @@ export default class Indexcomponent extends Component{
         return(
             <div className="login">
                 <header className="login_header">
-                	<span className="icon iconfont icon-htmal5icon37 back" onClick={this.goBack}></span>
+                	<Link to="/index" className="icon iconfont icon-htmal5icon37 back"></Link>
                 	<h2 className="headTitle">用户登录</h2>
                 	<a className="navBar fa fa-bars" ></a>
                 </header>
