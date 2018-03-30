@@ -16,22 +16,22 @@ html,body{height:100%;width:100%;}
 		.login_content{
 			display:flex;flex-direction:column;margin:0.3125rem auto 0;flex:1;
 			.content_account{
-				display:flex;flex-direction:column;position:relative;flex:1;
+				display:flex;flex-direction:column;position:relative;
 				.user_account{
 					width:8.3125rem;margin-bottom:1.25rem;height:1.3125rem;
-					i{font-size:70px;position:absolute;height:0.9375rem;top:0.09375rem;left:0.34375rem;}
-					input{height:1.3125rem;width:8.3125rem;padding-left:1.5625rem;font-size:0.4375rem;}
+					i{font-size:1.09375rem;position:absolute;height:0.9375rem;top:0.09375rem;left:0.34375rem;}
+					input{height:1.3125rem;width:8.3125rem;padding-left:1.5625rem;font-size:0.4375rem;border:1px solid #626365;border-radius:15px;}
 				}
 				.pwd_account{
 					width:8.3125rem;margin-bottom:1.25rem;height:1.3125rem;
 					i{font-size:1.09375rem;position:absolute;height:0.9375rem;top:2.6875rem;left:0.34375rem;}
-					input{height:1.3125rem;width:8.3125rem;padding-left:1.5625rem;font-size:0.4375rem;}
+					input{height:1.3125rem;width:8.3125rem;padding-left:1.5625rem;font-size:0.4375rem;border:1px solid #626365;border-radius:15px;}
 				}
 				.verify_account{
 					width:8.3125rem;display:flex;height:1.3125rem;
 					.yzminput{
 						width:3.1875rem;
-						input{height:1.3125rem;width:100%;padding-left:0.3125rem;font-size:0.4375rem;}
+						input{height:1.3125rem;width:100%;padding-left:0.3125rem;font-size:0.4375rem;border:1px solid #626365;border-radius:15px;}
 						p{height:0.533333rem;color:#f00;}
 					}
 					.yzmimg{
@@ -50,15 +50,15 @@ html,body{height:100%;width:100%;}
 				display:flex;flex-direction:column;position:relative;flex:1;
 				.user_phone{
 					width:8.3125rem;margin-bottom:1.25rem;height:1.3125rem;
-					i{font-size:70px;position:absolute;height:0.9375rem;top:0.09375rem;left:0.34375rem;}
-					input{height:1.3125rem;width:8.3125rem;padding-left:1.5625rem;font-size:0.4375rem;}
+					i{font-size:1.09375rem;position:absolute;height:0.9375rem;top:0.09375rem;left:0.34375rem;}
+					input{height:1.3125rem;width:8.3125rem;padding-left:1.5625rem;font-size:0.4375rem;border:1px solid #626365;border-radius:15px;}
 					p{height:0.533333rem;color:#f00;text-align:right;}
 				}
 				.verify_phone{
 					width:8.3125rem;display:flex;height:1.3125rem;margin-bottom:1.25rem;
 					.yzminput{
 						width:3.1875rem;
-						input{height:1.3125rem;width:100%;padding-left:0.3125rem;font-size:0.4375rem;}
+						input{height:1.3125rem;width:100%;padding-left:0.3125rem;font-size:0.4375rem;border:1px solid #626365;border-radius:15px;}
 						p{height:0.533333rem;color:#f00;}
 					}
 					.yzmimg{
@@ -69,8 +69,8 @@ html,body{height:100%;width:100%;}
 				}
 				.identify_phone{
 					height:1.3125rem;display:flex;justify-content:space-between;width:100%;
-					.security_code{width:3.93rem;font-size:0.4375rem;padding-left:0.3125rem;}
-					.getjym{height:1.25rem;width:3.125rem;background: #DF3832;border-radius:0.15625rem 0.15625rem;color:#fff;line-height:1.25rem;text-align:center;font-size:26px;}
+					.security_code{width:3.93rem;font-size:0.4375rem;padding-left:0.3125rem;border:1px solid #626365;border-radius:15px;}
+					.getjym{height:1.25rem;width:3.125rem;background: #DF3832;border-radius:0.15625rem 0.15625rem;color:#fff;line-height:1.25rem;text-align:center;font-size:0.40625rem;}
 				}
 				.login_btn2{height:1.0625rem;background: #DE4B45;display:block;height:1.0625rem;line-height:1.0625rem;text-align:center;color:#fff;margin:0.9375rem 0;}
 				.serve_phone{

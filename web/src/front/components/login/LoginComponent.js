@@ -229,7 +229,7 @@ export default class Indexcomponent extends Component{
                     <span className="login_btn2" onClick={this.loginPhone.bind(this)}>立即登录</span>
                     <div className="serve_phone">
                         <IndexLink to="/reg" activeClassName="regist">免费注册</IndexLink>
-                        <span className="getpwd">找回密码</span>
+                        <a className="getpwd">找回密码</a>
                     </div>
                 </div>
             )
@@ -264,7 +264,7 @@ export default class Indexcomponent extends Component{
                     <span  className="login_btn1" onClick={this.loginAccount.bind(this)}>立即登录</span>
                     <div className="serve_account">
                         <IndexLink to="/reg" activeClassName="regist">免费注册</IndexLink>
-                        <span className="getpwd">找回密码</span>
+                        <a className="getpwd">找回密码</a>
                     </div>
                 </div>
             )
