@@ -49,7 +49,7 @@ import GoodslistSearchComponent from '../components/goodlist/search/searchCompon
 import regComponent from '../components/login/reg/regComponent.js'
 import indentComponent from '../components/mine/indent/indentComponent.js'
 import collectComponent from '../components/mine/collect/collectComponent.js'
-
+import findComponent from '../components/login/findPassword/findComponent.js'
 
 export default (
     <Route path='/' component={appComponent}> 
@@ -76,6 +76,7 @@ export default (
         <Route path='/login' component={LoginComponent} /> 
         <Route path='/reg' component={regComponent}/>
         <Route path='/indent' component={indentComponent}></Route>
+        <Route path='/find' component={findComponent}></Route>
         <Route path='/collect' component={collectComponent}></Route>
         <Route path='/details' component={DetailsComponent}></Route>
         <Route path='/cart' component={CartComponent}/>
