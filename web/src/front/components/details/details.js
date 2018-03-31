@@ -1,5 +1,6 @@
 $(function(){
     
+<<<<<<< HEAD
     // var num = 1;
     // // 收藏/不收藏
     // $('#sc').on('click',()=>{
@@ -10,6 +11,18 @@ $(function(){
     //         $('#scc').attr("class","fa fa-heart-o").css("color","")
     //     }
     // })
+=======
+    var num = 1;
+    // 收藏/不收藏
+    $('#sc').on('click',()=>{
+        num++
+        if(num%2==0){
+            $('#scc').attr("class","fa fa-heart").css("color","red")
+        }else{
+            $('#scc').attr("class","fa fa-heart-o").css("color","")
+        }
+    })
+>>>>>>> 1b99b76ba6d4ac74aedb64f35fa27570e19aa104
 
 
     // 获取时间

@@ -49,8 +49,13 @@ import GoodslistSearchComponent from '../components/goodlist/search/searchCompon
 import regComponent from '../components/login/reg/regComponent.js'
 import collectComponent from '../components/mine/collect/collectComponent.js'
 import indentComponent from '../components/mine/indent/indentComponent.js'
+<<<<<<< HEAD
 import findComponent from '../components/login/findPassword/findComponent.js'
 
+=======
+import collectComponent from '../components/mine/collect/collectComponent.js'
+import findComponent from '../components/login/findPassword/findComponent.js'
+>>>>>>> 1b99b76ba6d4ac74aedb64f35fa27570e19aa104
 
 export default (
     <Route path='/' component={appComponent}> 
@@ -71,14 +76,19 @@ export default (
             <Route path='/list' component={ListComponent}/>
             <Route path='/gotoSearch' component={GotoSearchComponent}/>              
             <Route path='/mine' component={MineComponent} />
-            <Route path='/login' component={LoginComponent} /> 
-            <Route path='/reg' component={regComponent}/>
             <Route path='/list' component={ListComponent}/>            
         </Route>
+        <Route path='/login' component={LoginComponent} /> 
+        <Route path='/reg' component={regComponent}/>
         <Route path='/indent' component={indentComponent}></Route>
+<<<<<<< HEAD
         <Route path='/collect' component={collectComponent}></Route>
         <Route path='/find' component={findComponent}></Route>
 
+=======
+        <Route path='/find' component={findComponent}></Route>
+        <Route path='/collect' component={collectComponent}></Route>
+>>>>>>> 1b99b76ba6d4ac74aedb64f35fa27570e19aa104
         <Route path='/details' component={DetailsComponent}></Route>
         <Route path='/cart' component={CartComponent}/>
         <Route path='/jiesuan' component={jiesuanComponent}/>

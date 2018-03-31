@@ -23,9 +23,12 @@ export default class Indexcomponent extends Component{
     goIndent(){
         hashHistory.push({pathname:'indent'}); 
     }
+<<<<<<< HEAD
     collect(){
         
     }
+=======
+>>>>>>> 1b99b76ba6d4ac74aedb64f35fa27570e19aa104
     state = {
         username:''
     }

@@ -1,5 +1,6 @@
 import React,{Component} from 'react'
 import ReactDOM from 'react-dom'
+import {IndexLink,Link,hashHistory} from 'react-router'
 import './community.css'
 import http from '../../utils/httpclient.js'
 import {IndexLink,Link,hashHistory} from 'react-router'
@@ -35,9 +36,19 @@ export default class Indexcomponent extends Component{
     }
 
     componentWillMount(){
+<<<<<<< HEAD
         this.setState({
             spinnerShow:true,
         })
+=======
+        var username1 = sessionStorage.getItem("username");
+        console.log(username1)
+        if(username1){
+            this.setState({
+                username:username1
+            })
+        }
+>>>>>>> 1b99b76ba6d4ac74aedb64f35fa27570e19aa104
         http.get('http://10.3.136.55:8181/community',{}).then((res)=>{
             this.setState({
                 dataset:res.data
@@ -50,25 +61,56 @@ export default class Indexcomponent extends Component{
     }
 
     state = {
+<<<<<<< HEAD
 
         dataset : [],
         spinnerShow:false,
 
+=======
+        dataset : [],
+        username: ''
+>>>>>>> 1b99b76ba6d4ac74aedb64f35fa27570e19aa104
     }
     dengl(){
         hashHistory.push('/login')
     }
     render(){
+        var content;
+        if(this.state.username){
+            content = (
+                <Link to="/mine" className="goMine">
+                    <i className="fa fa-user-o"></i>
+                    <span>我的</span>
+                </Link>
+            )
+        }else{
+            content =(
+                <Link to="/login" className="goLogin">
+                    <i className="fa fa-user-o"></i>
+                    <span>登录</span>
+                </Link>
+            )
+        }
+        var toast = (
+            <div className="toast">
+                
+            </div>
+        )
+
         return(
 
             <div className="community">
                 
                 <div className="c_header">
+<<<<<<< HEAD
                     <span onClick={this.dengl}>
                         <i className="fa fa-user-o"></i>
                         <span>登录</span>
                     </span>
                     <span className="ico iconfont icon-xinxi sp2"></span>
+=======
+                    {content}
+>>>>>>> 1b99b76ba6d4ac74aedb64f35fa27570e19aa104
                 </div>
                 <SpinnerComponent show = {this.state.spinnerShow} />
                 <div className="swiper-container">

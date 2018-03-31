@@ -165,7 +165,11 @@ export default class Indexcomponent extends Component{
     loginAccount(){
         if(this.refs.yzm.value == this.state.yzm){
             http.get('selectAppUsers',{username:this.refs.tel.value,password:this.refs.pwd.value}).then((res) => {
+<<<<<<< HEAD
                 var data = res.data[0];
+=======
+                var data = res.data;
+>>>>>>> 1b99b76ba6d4ac74aedb64f35fa27570e19aa104
                 if(data.username == this.refs.tel.value && data.password == this.refs.pwd.value){
                     sessionStorage.setItem('username',data.username);
                     hashHistory.push({pathname:'mine'});
