@@ -1,0 +1,49 @@
+html,body{height:100%;width:100%;}
+.reg{
+	height:100%;display:flex;flex-direction: column;
+	.reg_header{
+		display:flex;height:1.25rem;flex-direction:row;background:#DE4943;justify-content:space-between;color:#fff;align-content:center;
+		.back{display:block;height:1.25rem;width:1.5rem;font-size:50px;line-height:1.25rem;text-align:center;}
+		.headTitle{font-size:28px;line-height:80px;}
+		.navBar{display:block;height:1.25rem;width:1.5rem;font-size:50px;line-height:1.25rem;text-align:center;}
+	}
+	.reg_main{
+		flex:1;display:flex;flex-direction: column;position:relative;margin:0.3125rem auto 0;
+		.user{
+			width:8.3125rem;margin-bottom:1.25rem;height:1.3125rem;margin-top:0.78125rem;
+			i{font-size:70px;position:absolute;height:0.9375rem;top:0.859375rem;left:0.34375rem;}
+			input{height:1.3125rem;width:8.3125rem;padding-left:1.5625rem;font-size:28px;}
+			p{height:0.533333rem;color:#f00;text-align:right;}
+			span{display:block;height:0.533333rem;color:#58bc58;text-align:right;}
+		}
+		.verify{
+			width:8.3125rem;display:flex;height:1.3125rem;margin-bottom:1.25rem;
+			.yzminput{
+				width:3.1875rem;
+				input{height:1.3125rem;width:100%;padding-left:0.3125rem;font-size:28px;}
+			}
+			.yzmimg{
+				width:5.0625rem;display:flex;justify-content:space-between;
+				.codeimg{width:3.4375rem;height:1.25rem;background: #2693FF;color:#ccc;margin-left:0.15625rem;font-size:50px;text-align:center;line-height:1.25rem;}
+				.change{color:#626365;line-height:1.25rem;text-align:center;}
+			}	
+		}
+		.identify{
+			height:1.3125rem;display:flex;justify-content:space-between;margin-bottom:1.25rem;
+			.security_code{heigt:100%;width:3.9375rem;font-size:28px;padding-left:0.3125rem;}
+			.getjym{height:1.25rem;width:3.125rem;background: #DF3832;border-radius:0.15625rem 0.15625rem;color:#fff;line-height:1.25rem;text-align:center;font-size:26px;}
+		}
+		.pwd1{
+			width:8.3125rem;margin-bottom:1.25rem;height:1.3125rem;
+			i{font-size:70px;position:absolute;height:0.9375rem;top:8.5625rem;left:0.34375rem;}
+			input{height:1.3125rem;width:8.3125rem;padding-left:1.5625rem;font-size:28px;}
+		}
+		.pwd2{
+			width:8.3125rem;margin-bottom:1.25rem;height:1.3125rem;
+			i{font-size:70px;position:absolute;height:0.9375rem;top:11.125rem;left:0.34375rem;}
+			input{height:1.3125rem;width:8.3125rem;padding-left:1.5625rem;font-size:28px;}
+			p{height:0.533333rem;color:#f00;text-align:right;}
+		}
+		.reg_btn{height:1.0625rem;background: #DE4B45;display:block;height:1.0625rem;line-height:1.0625rem;text-align:center;color:#fff;border-radius:0.15625rem 0.15625rem;}
+	}
+}

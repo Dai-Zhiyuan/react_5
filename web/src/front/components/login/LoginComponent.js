@@ -28,15 +28,24 @@ export default class Indexcomponent extends Component{
             val.refs.jymBtn.style.background='#DF3832'
             val.refs.jymBtn.value = '重新获取';
             jymTime = 60;
+            if(val.refs.jymBtn){
+                val.refs.jymBtn.removeAttribute("disabled");
+                val.refs.jymBtn.style.background='#DF3832'
+                val.refs.jymBtn.value = '重新获取';
+            }
+            jymTime = 10;
             val.setState({
                 jym:null
             })
             console.log(val.state.jym);
             return
         }else{
-            val.refs.jymBtn.setAttribute("disabled", true);
-            val.refs.jymBtn.style.background='#626365';
-            val.refs.jymBtn.value = "重新发送(" + jymTime + ")";
+            if(val.refs.jymBtn){
+                val.refs.jymBtn.setAttribute("disabled", true);
+                val.refs.jymBtn.style.background='#626365';
+                val.refs.jymBtn.value = "重新发送(" + jymTime + ")";
+            }
+            
             jymTime--;
         }
         setTimeout(function(){
@@ -44,7 +53,7 @@ export default class Indexcomponent extends Component{
             ,1000)
     }
     callback(){
-        console.log(this.state.jym)
+        console.log('校验码：'+ this.state.jym);
     }
     yzm(){
         var res = '';
@@ -120,19 +129,36 @@ export default class Indexcomponent extends Component{
                             sessionStorage.setItem('username',this.refs.tel.value);
                             hashHistory.push({pathname:'mine'});
                         }else{
-                            alert('校验码错误')
+                            this.setState({
+                                tip:true,
+                                tipTxt:'校验码错误！'
+                            });
+                            this.refs.jym.value = '';
                         }
                     }else{
-                        alert('验证码错误');
+                        this.setState({
+                            tip:true,
+                            tipTxt:'验证码错误！'
+                        })
                         this.refs.yzm.value = '';
                     }
                 }else{
-                    alert('该手机号未被注册');
+                    this.setState({
+                        tip:true,
+                        tipTxt:'该手机号未被注册！'
+                    })
                     this.refs.tel.value = '';
                 }
             })
         }else{
-            alert('请输入正确的手机号');
+            this.setState({
+                tip:true,
+                tipTxt:'请输入正确的手机号！',
+                noPhoneNum:false,
+                errorPhoneNum:false,
+                noYzm:false
+
+            })
             this.refs.tel.value = '';
         }
     }
@@ -140,17 +166,25 @@ export default class Indexcomponent extends Component{
         if(this.refs.yzm.value == this.state.yzm){
             http.get('selectAppUsers',{username:this.refs.tel.value,password:this.refs.pwd.value}).then((res) => {
                 var data = res.data[0];
-                console.log(data);
                 if(data.username == this.refs.tel.value && data.password == this.refs.pwd.value){
                     sessionStorage.setItem('username',data.username);
                     hashHistory.push({pathname:'mine'});
-                    console.log(sessionStorage);
+                    // console.log(sessionStorage);
                 }else{
-                    alert('账户或密码错误');
+                    this.setState({
+                        tip:true,
+                        tipTxt:'账户或密码错误！'
+                    })
+                    this.refs.tel.value = '';
+                    this.refs.pwd.value = '';
                 }
             })
         }else{
-            alert('验证码错误');
+            this.setState({
+                tip:true,
+                tipTxt:'验证码错误！',
+                noYzm:false
+            })
             this.refs.yzm.value = '';
         }
     }
@@ -161,6 +195,11 @@ export default class Indexcomponent extends Component{
                 data:res
             })
             console.log(this.state.data)
+        })
+    }
+    closeTip(){
+        this.setState({
+            tip:false
         })
     }
     state={
@@ -174,7 +213,10 @@ export default class Indexcomponent extends Component{
         errorPhoneNum:'',
         noYzm:'',
         jym:null,
+        tip: false,
+        tipTxt: ''
     }
+
     render(){
         var content;
         if(this.state.phoneShow){
@@ -189,7 +231,6 @@ export default class Indexcomponent extends Component{
                     <p>！请输入正确的手机号</p>
                 )
             }
-
             var content2;
             if(this.state.noYzm){
                 content2=(
@@ -220,7 +261,7 @@ export default class Indexcomponent extends Component{
                     <span className="login_btn2" onClick={this.loginPhone.bind(this)}>立即登录</span>
                     <div className="serve_phone">
                         <IndexLink to="/reg" activeClassName="regist">免费注册</IndexLink>
-                        <a href="" className="getpwd">找回密码</a>
+                        <Link to="/find" className="getpwd">找回密码</Link>
                     </div>
                 </div>
             )
@@ -255,15 +296,27 @@ export default class Indexcomponent extends Component{
                     <span  className="login_btn1" onClick={this.loginAccount.bind(this)}>立即登录</span>
                     <div className="serve_account">
                         <IndexLink to="/reg" activeClassName="regist">免费注册</IndexLink>
-                        <a href="" className="getpwd">找回密码</a>
+                        <Link to="/find" className="getpwd">找回密码</Link>
                     </div>
                 </div>
             )
         }
+        if(this.state.tip){
+            var tipContent;
+            tipContent = (
+               <div className="shade">
+                   <div className="warning">
+                       <p className="tip_text">{this.state.tipTxt}</p>
+                       <span className="tip_btn" onClick={this.closeTip.bind(this)}>确定</span>
+                   </div>
+               </div> 
+            )
+        }
         return(
             <div className="login">
+                {tipContent}
                 <header className="login_header">
-                	<a className="back">&lt;</a>
+                	<Link to="/index" className="icon iconfont icon-htmal5icon37 back"></Link>
                 	<h2 className="headTitle">用户登录</h2>
                 	<a className="navBar fa fa-bars" ></a>
                 </header>

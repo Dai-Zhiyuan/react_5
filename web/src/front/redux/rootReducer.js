@@ -2,11 +2,13 @@ import React from 'react'
 import {combineReducers} from 'redux'
 
 import datagrid from '../component/datagrid/datagridreducer'
+import signup from '../components/login/signup/signupReducer.js'
 // import student from '../components/student/studentreducer'
 // import modal from '../components/modal/modalreducer'
 
 export default combineReducers({
-    datagrid
+    datagrid,
+    signup
 })
 
 // new Vuex.Store({

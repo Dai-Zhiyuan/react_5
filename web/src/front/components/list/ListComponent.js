@@ -11,13 +11,25 @@ export default class Indexcomponent extends Component{
         dataset: []
     }
     componentWillMount(){
-        
-        http.get('products',this.props.location.query).then((res) => {
-            // console.log(res)
-            this.setState({
-                dataset: res.data
+        // if(this.props.location.query == ''){
+        //     this.props.location.query = {brand: "茅台"}
+        // }
+        if(this.props.location.query){
+            http.get('products',this.props.location.query ).then((res) => {
+                // console.log(res)
+                this.setState({
+                    dataset: res.data
+                })
             })
-        })
+        } else {
+            http.get('products',{brand: "茅台"} ).then((res) => {
+                // console.log(res)
+                this.setState({
+                    dataset: res.data
+                })
+            })
+        }
+        
     }
     all(){
         http.get('products',this.props.location.query).then((res) => {
@@ -82,9 +94,9 @@ export default class Indexcomponent extends Component{
                                         <img src={item.img} />
                                         <p className="goodsName">{item.name}</p>
                                         <p className="price">￥{item.price}</p>
-                                        <p>产地：{item.address}</p>
-                                        <p >销量：{item.saleQty}</p>
-                                        <p><span>99%好评</span><span>评论数：{item.reviewQty}</span></p>
+                                        <p style={{color:'#666'}}>产地：{item.address}</p>
+                                        <p style={{color:'#666'}} >销量：{item.saleQty}</p>
+                                        <p><span style={{color:'green'}}>99%好评</span><span style={{color:'blue'}}>评论数：{item.reviewQty}</span></p>
                                     </Link>
                                 </li>
                                 

@@ -12,7 +12,7 @@ export default class Indexcomponent extends Component{
         
     }
     componentWillMount(){
-        http.get('http://10.3.136.55:8181/getCart?username=hyz').then((res)=>{
+        http.get('http://10.3.136.55:8181/getCart?username='+sessionStorage.getItem('username')).then((res)=>{
             this.setState({
                 dataset: res.data
             })

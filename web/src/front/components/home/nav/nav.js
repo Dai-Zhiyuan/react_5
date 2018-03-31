@@ -1,8 +1,15 @@
 import React,{Component} from 'react'
 import ReactDOM from 'react-dom'
 import './nav.css'
-import { BrowserRouter as Router, Link,IndexLink} from "react-router";
+import { BrowserRouter as Router, Link,IndexLink,hashHistory} from "react-router";
 export default class Indexcomponent extends Component{
+
+    user(){
+            // console.log(111)
+        if(sessionStorage.getItem('username')==null){
+            hashHistory.push('/login')
+        }
+    }
     render(){
         return(
             <div className="nnav">
@@ -21,9 +28,9 @@ export default class Indexcomponent extends Component{
                         
                         <Link to="/community" activeClassName="active"><i className="icon iconfont icon-taolun"></i>社区</Link>
                     </li>
-                    <li>
+                    <li onClick={this.user}>
                         
-                        <Link to="/cart" activeClassName="active"><i className="icon iconfont icon-gouwuche1"></i>购物车</Link>
+                        <Link to="/cart" activeClassName="active"><i className="icon iconfont icon-gouwuche1" ></i>购物车</Link>
                     </li>
                     <li>
                         

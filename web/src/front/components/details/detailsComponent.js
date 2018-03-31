@@ -1,6 +1,6 @@
 import React,{Component} from 'react'
 import ReactDOM from 'react-dom'
-import { BrowserRouter as Router, Link,IndexLink} from "react-router";
+import { BrowserRouter as Router, Link,IndexLink,hashHistory} from "react-router";
 
 // 引入样式
 import './details.css'
@@ -11,6 +11,7 @@ import './details.js'
 export default class DetailsComponent extends Component{
     
     componentWillMount(){
+
         http.get('http://10.3.136.55:8181/suibianid',this.props.location.query).then((res)=>{
             // console.log(res.data)
             this.setState({
@@ -18,48 +19,68 @@ export default class DetailsComponent extends Component{
             })
         })
     }
-
     state = {
         dataset:[],
         display :'flex',
         count:0,
         shopCount:1,
         qtyNum:0,
-        qtynum:0
+        qtynum:0,
+        color:''
     }
     
     goCar(){
         var data = this.state.dataset;
-        this.state.qtynum += (this.refs.input.value)*1;
+        this.state.qtynum += (this.refs.input.innerText)*1;
         this.setState({
             qtyNum:this.state.qtynum
         })
         
         if(this.refs.input){
-            // console.log('1')
-            http.get('http://10.3.136.55:8181/add',{db:"cart",username:'hyz',_id:data[0].id,name:data[0].name,price:data[0].price,qty:this.refs.input.value,img:data[0].img}).then((res)=>{
+            var username = sessionStorage.getItem('username');
+            http.get('http://10.3.136.55:8181/add',{db:"cart",username:username,_id:data[0].id,name:data[0].name,price:data[0].price,qty:this.refs.input.innerText*1,img:data[0].img}).then((res)=>{
+
             })
         }
     }
-
+    toCart(){
+        hashHistory.push('/cart')
+    }
     onclose(){
         this.setState({
             display:'none'
         })
     }
     goAdd(){
-        this.setState({
-            shopCount: this.state.shopCount + 1
-        })
+        // console.log(this.refs.input.innerText)
+
+        this.refs.input.innerText = this.refs.input.innerText*1+1;
     }
     goCut(){
-        if(this.state.shopCount==1){
-            return false
+        // console.log(this.refs.input.innerText*1)
+        if(this.refs.input.innerText*1 > 1){
+            this.refs.input.innerText = this.refs.input.innerText-1;
         }
-        this.setState({
-            shopCount: this.state.shopCount - 1
-        })
+        
     }
+    sc(){
+        var username = sessionStorage.getItem('username');
+            if(this.state.scbgColor == 'red'){
+                this.setState({
+                    scbgColor : ''
+                })
+            }else{
+                this.setState({
+                    scbgColor : 'red'
+                })
+            }
+            var data = this.state.dataset;
+            http.get('http://10.3.136.55:8181/addCollect',{db:"collect",_id:data[0].id,username:username,name:data[0].name,price:data[0].price,img:data[0].img}).then((res)=>{
+
+                })
+        }
+
+
     render(){
         // console.log(this.state.dataset)
         return(
@@ -143,7 +164,7 @@ export default class DetailsComponent extends Component{
                                 <span>数量</span>
                                 <span className="add">
                                     <button onClick={this.goCut.bind(this)} className="left_a">-</button>
-                                    <input type="text" ref="input" value={this.state.shopCount}/>
+                                    <span ref="input" className="spanAddCut">1</span>
                                     <button onClick={this.goAdd.bind(this)} className="right_a">+</button>
                                 </span>
                             </div>
@@ -208,7 +229,7 @@ export default class DetailsComponent extends Component{
                                     <span>等待等待</span>
                                     <span className="sp_bor">酒虫</span>
                                     <span className="sp_img"></span>
-                                    <span className="time">1</span>
+                                    <span className="time"></span>
                                 </div>
                                 <p>还没喝,喝了在评</p>
                                 <span className="pic_r">
@@ -316,32 +337,33 @@ export default class DetailsComponent extends Component{
                     </div>
                 </div>
                 <div className="foot">
-                    <ul>
-                        <li className="option1">
-                            <i className="fa fa-user-o"></i>
-                            <span>侍酒师</span>
-                        </li>
-                        <li className="option1" id="sc" >
-                            <i className="fa fa-heart-o" id="scc"></i>
-                            <span>收藏</span>
-                        </li>
-                        <li className="option1">
-                            <i className="fa fa-shopping-cart"></i>
-                            <span>购物车</span>
-                            <div>{this.state.qtyNum}</div>
-                        </li>
-                        <li className="option2 col1">
-                            <i></i>
-                            <span onClick={this.goCar.bind(this)}>
-                                加入购物车
-                            </span>
-                        </li>
-                        <li className="option2 col2">
-                            <i></i>
-                            <span>立即购买</span>
-                        </li>
-                    </ul>
-                </div>
+                                    <ul>
+                                        <li className="option1">
+                                            <i className="fa fa-user-o"></i>
+                                            <span>侍酒师</span>
+                                        </li>
+                                        <li className="option1" id="sc" onClick={this.sc.bind(this)}>
+                                            <i className="fa fa-heart-o" id="scc" style={{color:this.state.scbgColor}}></i>
+                                            <span>收藏</span>
+                                        </li>
+                                        <li className="option1">
+                                            <i className="fa fa-shopping-cart"></i>
+                                            <Link to="/cart"><span className="col4">购物车</span></Link>
+                                            <div>{this.state.qtyNum}</div>
+                                        </li>
+                                        <li className="option2 col1">
+                                            <i></i>
+                                            <span onClick={this.goCar.bind(this)}>
+                                                加入购物车
+                                            </span>
+                                        </li>
+                                        <li className="option2 col2">
+                                            <i></i>
+                                            <Link to="/cart"><span className="col3">立即购买</span></Link>
+                                        </li>
+                                    </ul>
+                                </div>
+
             </div>
         )
     }

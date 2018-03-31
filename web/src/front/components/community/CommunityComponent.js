@@ -2,6 +2,10 @@ import React,{Component} from 'react'
 import ReactDOM from 'react-dom'
 import './community.css'
 import http from '../../utils/httpclient.js'
+import {IndexLink,Link,hashHistory} from 'react-router'
+
+import SpinnerComponent from '../spinner/SpinnerComponent.js'
+
 
 export default class Indexcomponent extends Component{
 
@@ -31,10 +35,15 @@ export default class Indexcomponent extends Component{
     }
 
     componentWillMount(){
-
+        this.setState({
+            spinnerShow:true,
+        })
         http.get('http://10.3.136.55:8181/community',{}).then((res)=>{
             this.setState({
                 dataset:res.data
+            })
+            this.setState({
+                spinnerShow:false,
             })
         })
 
@@ -42,22 +51,26 @@ export default class Indexcomponent extends Component{
 
     state = {
 
-        dataset : []
+        dataset : [],
+        spinnerShow:false,
 
     }
-
+    dengl(){
+        hashHistory.push('/login')
+    }
     render(){
         return(
+
             <div className="community">
                 
                 <div className="c_header">
-                    <span>
+                    <span onClick={this.dengl}>
                         <i className="fa fa-user-o"></i>
                         <span>登录</span>
                     </span>
                     <span className="ico iconfont icon-xinxi sp2"></span>
                 </div>
-
+                <SpinnerComponent show = {this.state.spinnerShow} />
                 <div className="swiper-container">
                 <div className="swiper-wrapper">
                     <div className="swiper-slide"><img src="./src/front/img/shequ1.jpg" /></div>

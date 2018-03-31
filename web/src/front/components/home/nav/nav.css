@@ -21,6 +21,7 @@
     font-size:0.3125rem;
     height:100%;
     width: 100%;
+    text-decoration: none;
     line-height:0.765625rem;
 }
 .nnav ul li a i{

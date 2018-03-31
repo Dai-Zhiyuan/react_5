@@ -3,13 +3,22 @@ import ReactDOM from 'react-dom'
 import {Link,hashHistory} from 'react-router'
 import './search.scss'
 export default class Indexcomponent extends Component{
-    componentDidMount(){
+    componentWillMount(){
+        if(this.refs.input){
+
         this.refs.input.value = '';
         this.refs.input.focus()
+        }
         document.addEventListener('keyup',(e) => {
             if(e.keyCode == '13'){
                 if(this.refs.input){
                     let brand = this.refs.input.value;
+                   
+                    if(!this.refs.input.value){
+                        
+                        brand='茅台'
+                    }
+                   
                     hashHistory.push('/list?brand='+brand) 
                 }
                 
