@@ -1,0 +1,52 @@
+.spage{
+
+    display:inline-block;
+    font-size: 16px;
+    padding:5px;text-align:center;height: 35px;width: 50px;
+    color:#4c4c4c;
+    border:1px solid #ddd;
+         
+}
+.pages span{
+        display:block;
+        float: left;
+        padding: 5px 10px;
+        border:1px solid #ccc;
+        text-align:center;
+        cursor: pointer;
+    }
+ .activePage{color:red;}
+
+  .showFalse{display:none;}
+ .showTrue{display:inline-block;}
+ .showhaha{display:inline-block!important;}
+
+ .river{
+    height: 3px;
+ }
+ .green{background-color: #58bc58 !important;border:1px solid #58bc58 !important;}
+
+ .zhezhao{
+   
+}
+.plaCenter{
+    opacity: 0.8;width: 380px;border:2px solid #ccc;
+    text-align: center;font-size: 36px;
+    background: rgba(0, 0, 0, 0.5);z-index: 999;color:#fff;
+    position:absolute;left: 50%;top: 15%;
+
+    label{
+        font-size: 16px;width: 80px;text-align:right;
+    }
+    input{
+        font-size: 16px;
+    }
+
+
+}
+#btnSure{margin-right: 10px;}
+
+.btnInline{
+    display:inline-block;
+}
+table .tdStyle{text-overflow: ellipsis;overflow: hidden;white-space: nowrap ;max-width:80px;}

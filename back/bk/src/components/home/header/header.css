@@ -1,0 +1,6 @@
+.header{background: #2D3F51;position:relative;}
+h1{text-align: center;line-height: 80px;display: inline-block;width:80%;color:#fff;}
+/* .col-sm-2{float:right;}
+.form-control-sm{width:60px;margin:20px 10px;} */
+.input-group{width:200px;position:absolute;color:#fff;top: 20px;right: 20px; }
+.input-group-text{width:105px;color:#fff;}
